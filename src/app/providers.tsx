@@ -1,7 +1,7 @@
 'use client'
 
-import { MainProvider } from '@/providers/MainContext'
+import { LandingProvider } from '@/providers/LandingContext'
 
-export function MainProviders({ children }: { children: React.ReactNode }) {
-  return <MainProvider>{children}</MainProvider>
+export function LandingProviders({ children }: { children: React.ReactNode }) {
+  return <LandingProvider>{children}</LandingProvider>
 }

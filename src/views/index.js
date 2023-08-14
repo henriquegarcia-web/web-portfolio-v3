@@ -1,3 +1,4 @@
-import MainView from './Main'
+import LandingPage from './LandingPage'
+import BlogPage from './BlogPage'
 
-export { MainView }
+export { LandingPage, BlogPage }
