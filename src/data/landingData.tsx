@@ -71,6 +71,7 @@ const aboutMeData = {
     </>
   ),
   aboutMeHobbies: hobbiesData,
+  aboutMePhoto: '/images/profile_image_02.jpeg',
   aboutMeName: 'Henrique P. Garcia',
   aboutMeOffice: 'Programador de Front-End',
   aboutMeAge: 21,

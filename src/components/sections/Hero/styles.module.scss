@@ -14,31 +14,31 @@
   display: flex;
   flex-direction: column;
   row-gap: 15px;
-}
 
-.hero_section__header {
-  font-size: 40px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  .hero_section__header {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 
-  color: white;
-}
-
-.hero_section__legend {
-  color: white;
-
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-
-  b {
-    font-weight: 500;
+    color: white;
   }
-}
 
-.hero_section__navigation {
-  display: flex;
-  column-gap: 6px;
-  margin-top: 10px;
+  .hero_section__legend {
+    color: white;
+
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+
+    b {
+      font-weight: 500;
+    }
+  }
+
+  .hero_section__navigation {
+    display: flex;
+    column-gap: 6px;
+    margin-top: 10px;
+  }
 }

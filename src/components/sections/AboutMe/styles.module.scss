@@ -7,5 +7,78 @@
   width: 100%;
   max-width: $section-maxwidth;
 
-  border: 2px solid white;
+  // border: 2px solid white;
+}
+
+.aboutme_section__container {
+  display: flex;
+  column-gap: 30px;
+  padding: 30px;
+  border-radius: $bradius-container;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  .aboutme_section__left_side {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    width: 50%;
+
+    .aboutme_section__resume {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+
+        color: white;
+      }
+    }
+
+    .aboutme_section__hobbies {
+      display: flex;
+      flex-direction: column;
+
+      .hobbies__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 6px;
+        row-gap: 8px;
+      }
+    }
+  }
+
+  .aboutme_section__right_side {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    .aboutme_section__infos {
+      display: flex;
+      flex-direction: column;
+
+      .infos__wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        padding: $spacing-medium;
+        border-radius: $bradius-item;
+
+        background-color: $bg-container;
+
+        .infos__credentials {
+          display: flex;
+          flex-direction: column;
+          row-gap: 6px;
+        }
+
+        .infos__social_medias {
+          display: flex;
+          column-gap: 10px;
+        }
+      }
+    }
+  }
 }

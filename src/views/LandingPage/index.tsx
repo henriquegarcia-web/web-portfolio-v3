@@ -15,9 +15,9 @@ export default function LandingPage() {
     <div className={styles.landing_page}>
       <Header />
       <div className={styles.landing_page__wrapper}>
-        <Section sectionName="home">
+        {/* <Section sectionName="home">
           <HeroSection />
-        </Section>
+        </Section> */}
         <Section sectionName="aboutme_section">
           <AboutMeSection />
         </Section>

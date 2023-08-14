@@ -1,0 +1,29 @@
+@import '@/styles/variables.module.scss';
+
+.tag {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px 8px 5px 18px;
+  border-radius: 100px;
+  cursor: pointer;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  background-color: $bg-block;
+  color: white;
+
+  &:before {
+    position: absolute;
+    left: 6px;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: $bradius-circle;
+
+    background-color: #00ebeb;
+  }
+}
