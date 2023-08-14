@@ -1,0 +1,29 @@
+@import '@/styles/variables.module.scss';
+
+.icon_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: $bradius-circle;
+  cursor: pointer;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  color: white;
+
+  svg {
+    font-size: 18px;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    // background-color: ${Colors.button};
+
+    svg {
+      transition: all 0.5s ease-out;
+      transform: rotateY(360deg);
+    }
+  }
+}

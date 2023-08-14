@@ -4,7 +4,7 @@ import styles from './styles.module.scss'
 
 import { Link } from 'react-scroll'
 
-import { menuData } from '@/data/menus'
+import { menuData } from '@/data/landingData'
 
 export default function Header() {
   return (

@@ -1,6 +1,14 @@
 import styles from './styles.module.scss'
 
-import { Header, Section, HeroSection, AboutMeSection } from '@/components'
+import {
+  Header,
+  Section,
+  HeroSection,
+  AboutMeSection,
+  MySkillsSection,
+  MyProjectsSection,
+  ThanksSection
+} from '@/components'
 
 export default function LandingPage() {
   return (
@@ -12,6 +20,15 @@ export default function LandingPage() {
         </Section>
         <Section sectionName="aboutme_section">
           <AboutMeSection />
+        </Section>
+        <Section sectionName="myskills_section">
+          <MySkillsSection />
+        </Section>
+        <Section sectionName="portfolio_section">
+          <MyProjectsSection />
+        </Section>
+        <Section sectionName="thanks_section">
+          <ThanksSection />
         </Section>
       </div>
     </div>
