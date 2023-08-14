@@ -25,7 +25,9 @@
 
 body {
   scroll-behavior: smooth;
-  overflow: hidden;
+  // overflow: hidden;
+
+  background-color: $bg-container;
 }
 
 // ------------------------- SCROLL BAR
