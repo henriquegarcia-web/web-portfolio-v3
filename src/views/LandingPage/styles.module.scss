@@ -2,12 +2,10 @@
 
 .landing_page {
   display: flex;
-  padding-top: $header-height;
 }
 
 .landing_page__wrapper {
   display: flex;
   flex-direction: column;
-
-  border: 1px solid red;
+  width: 100%;
 }

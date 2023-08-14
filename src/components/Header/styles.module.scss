@@ -2,12 +2,105 @@
 
 .header {
   display: flex;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: $header-height;
-  background-color: $bg-main;
+  padding: 0 $padding-side;
 
+  background-color: $bg-main;
   color: white;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  transition: 0.2s ease-in-out;
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+
+  b {
+    cursor: pointer;
+
+    padding-right: 8px;
+    margin-right: 8px;
+    font-weight: 400;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.8);
+
+    &:hover {
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+.header__menu {
+  display: flex;
+  height: 100%;
+
+  .header__navigation {
+    display: flex;
+
+    .header__navigation__link {
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      cursor: pointer;
+      transition: 0.2s;
+
+      font-size: 15px;
+      line-height: 15px;
+      font-weight: 200;
+      letter-spacing: 0.5px;
+
+      border-left: 1px solid rgba(255, 255, 255, 0.15);
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        background-color: $bg-container-hover;
+        border-bottom: 2px solid #3a4750;
+      }
+
+      &.active {
+        border-bottom: 2px solid $menu-active;
+        border: 2px solid red !important;
+      }
+    }
+  }
+
+  .header__main_menu {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    height: 100%;
+    padding-left: $padding-side;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+
+    .header__main_menu__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      height: 32px;
+      padding: 0 20px;
+      border-radius: 50px;
+
+      font-size: 12px;
+      line-height: 12px;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+
+      background-color: #282d33;
+      color: white;
+    }
+  }
 }
