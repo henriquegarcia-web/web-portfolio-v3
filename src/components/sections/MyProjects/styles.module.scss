@@ -12,14 +12,8 @@
 
 .myprojects_section__container {
   position: relative;
-  display: flex;
   flex-direction: column;
-  width: 100%;
   column-gap: 30px;
-  padding: 30px;
-  border-radius: $bradius-container;
-
-  background-color: rgba(0, 0, 0, 0.4);
 
   .myprojects_section__wrapper {
     position: relative;

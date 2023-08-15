@@ -93,7 +93,9 @@ export default function MySkillsSection() {
 
   return (
     <div className={styles.myskills_section}>
-      <div className={styles.myskills_section__container}>
+      <div
+        className={`section_container ${styles.myskills_section__container}`}
+      >
         <div className={styles.myskills_section__left_side}>
           <div className={styles.myskills_section__skills}>
             <h2 className="section_header">Árvore de Habilidades</h2>

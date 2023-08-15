@@ -8,7 +8,10 @@ interface ITag {
 
 export default function Tag({ isActive, label, onClick }: ITag) {
   return (
-    <span className={styles.tag} onClick={onClick && onClick}>
+    <span
+      className={`${styles.tag} ${isActive && styles.isActive}`}
+      onClick={onClick && onClick}
+    >
       {label}
     </span>
   )

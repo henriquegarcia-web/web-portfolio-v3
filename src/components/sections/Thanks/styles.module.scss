@@ -11,16 +11,10 @@
 }
 
 .thanks_section__container {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   row-gap: 15px;
-  width: 100%;
-  padding: 30px;
-  border-radius: $bradius-container;
-
-  background-color: rgba(0, 0, 0, 0.4);
 
   .thanks_section__header {
     margin-bottom: 10px;

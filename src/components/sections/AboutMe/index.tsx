@@ -20,7 +20,7 @@ export default function AboutMeSection() {
 
   return (
     <div className={styles.aboutme_section}>
-      <div className={styles.aboutme_section__container}>
+      <div className={`section_container ${styles.aboutme_section__container}`}>
         <div className={styles.aboutme_section__left_side}>
           <div className={styles.aboutme_section__resume}>
             <h2 className="section_header">Resumo</h2>

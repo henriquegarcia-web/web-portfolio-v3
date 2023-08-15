@@ -76,9 +76,19 @@ body {
   margin-bottom: 12px;
 
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 
   color: white;
+}
+
+.section_container {
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  border-radius: $bradius-container;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
 }

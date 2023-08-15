@@ -21,7 +21,9 @@ import { projectsData } from '@/data/landingData'
 export default function MyProjectsSection() {
   return (
     <div className={styles.myprojects_section}>
-      <div className={styles.myprojects_section__container}>
+      <div
+        className={`section_container ${styles.myprojects_section__container}`}
+      >
         <h2 className="section_header">Portfólio</h2>
         <div className={styles.myprojects_section__wrapper}>
           <Swiper

@@ -7,7 +7,7 @@ import { socialMediasData } from '@/data/landingData'
 export default function ThanksSection() {
   return (
     <div className={styles.thanks_section}>
-      <div className={styles.thanks_section__container}>
+      <div className={`section_container ${styles.thanks_section__container}`}>
         <h3 className={styles.thanks_section__header}>
           <b>Obrigado</b> pela visita
         </h3>

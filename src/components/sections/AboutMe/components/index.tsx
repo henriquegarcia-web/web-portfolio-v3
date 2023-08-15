@@ -54,7 +54,7 @@ interface ISocialMediaCard {
 
 function SocialMediaCard({ icon, label, url }: ISocialMediaCard) {
   return (
-    <Link href={url} className={styles.media_card}>
+    <Link href={url} target="_blank" className={styles.media_card}>
       <div className={styles.media_card__icon}>{icon}</div>
       <div className={styles.media_card__label}>{label}</div>
     </Link>
