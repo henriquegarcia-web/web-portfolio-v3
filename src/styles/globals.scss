@@ -92,3 +92,20 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(2px);
 }
+
+.revealLeft,
+.revealRight {
+  // position: relative;
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.revealLeft.active {
+  transform: translate(-45%, 30%);
+  opacity: 0.8;
+}
+
+.revealRight.active {
+  transform: translate(45%, 30%);
+  opacity: 0.8;
+}

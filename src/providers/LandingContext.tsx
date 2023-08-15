@@ -54,6 +54,45 @@ const LandingProvider = ({ children }: { children: React.ReactNode }) => {
     setActiveSkill(activeGroup?.skillGroupItems[0])
   }, [activeGroup])
 
+  // ===================================================================
+
+  useEffect(() => {
+    function reveal() {
+      const revealsLeft = document.querySelectorAll('.revealLeft')
+      const revealsRight = document.querySelectorAll('.revealRight')
+
+      for (let i = 0; i < revealsLeft.length; i++) {
+        const windowHeight = window.innerHeight
+        const elementTop = revealsLeft[i].getBoundingClientRect().top
+        const elementVisible = 150
+
+        if (elementTop < windowHeight - elementVisible) {
+          revealsLeft[i].classList.add('active')
+        } else {
+          revealsLeft[i].classList.remove('active')
+        }
+      }
+
+      for (let i = 0; i < revealsRight.length; i++) {
+        const windowHeight = window.innerHeight
+        const elementTop = revealsRight[i].getBoundingClientRect().top
+        const elementVisible = 150
+
+        if (elementTop < windowHeight - elementVisible) {
+          revealsRight[i].classList.add('active')
+        } else {
+          revealsRight[i].classList.remove('active')
+        }
+      }
+    }
+
+    window.addEventListener('scroll', reveal)
+
+    return () => {
+      window.removeEventListener('scroll', reveal)
+    }
+  }, [])
+
   // =================================================================
 
   const LandingContextValues = useMemo(() => {

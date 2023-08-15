@@ -152,6 +152,10 @@ export default function MySkillsSection() {
           </div>
         </div>
       </div>
+
+      <div className={`revealRight ${styles.myskills_section__effect}`}>
+        <img src="/images/effects/backdrop_02.png" alt="" />
+      </div>
     </div>
   )
 }

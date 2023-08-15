@@ -32,7 +32,7 @@ export default function HeroSection() {
         </div>
       </div>
       <div className={styles.hero_section__avatar}>
-        <img src="/images/avatar_01.png" alt="" />
+        <img src="/images/avatares/avatar_01.png" alt="" />
       </div>
     </div>
   )

@@ -1,6 +1,7 @@
 @import '@/styles/variables.module.scss';
 
 .myprojects_section {
+  position: relative;
   display: flex;
   flex: 1;
   align-items: center;
@@ -10,7 +11,18 @@
   // border: 2px solid white;
 }
 
+.myprojects_section__effect {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-70%, 60%) scale(0.8);
+
+  // img {
+  // }
+}
+
 .myprojects_section__container {
+  z-index: 10;
   position: relative;
   flex-direction: column;
   column-gap: 30px;

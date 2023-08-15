@@ -1,6 +1,7 @@
 @import '@/styles/variables.module.scss';
 
 .thanks_section {
+  position: relative;
   display: flex;
   flex: 1;
   align-items: center;
@@ -11,6 +12,7 @@
 }
 
 .thanks_section__container {
+  z-index: 10;
   flex-direction: column;
   justify-content: center;
   align-items: center;
