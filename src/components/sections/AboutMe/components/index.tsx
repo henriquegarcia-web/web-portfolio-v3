@@ -1,5 +1,8 @@
-import React from 'react'
+'use client'
+
+import React, { useRef, useState } from 'react'
 import styles from './styles.module.scss'
+import { FiCopy } from 'react-icons/fi'
 
 import Link from 'next/link'
 
@@ -36,10 +39,34 @@ interface ICredentialsCard {
 }
 
 function CredentialsCard({ label, value }: ICredentialsCard) {
+  const targetRef = useRef(null)
+
+  const [copied, setCopied] = useState(false)
+
+  const handleCopyClick = async () => {
+    try {
+      await navigator.clipboard.writeText(value)
+      setCopied(true)
+    } catch (error) {
+      console.error('Erro ao copiar para a área de transferência:', error)
+    }
+  }
+
+  const handleMouseLeave = () => {
+    setCopied(false)
+  }
+
   return (
-    <div className={styles.credential_card}>
+    <div className={styles.credential_card} ref={targetRef}>
       <b>{label}</b>
       <p>{value}</p>
+      <span
+        className={styles.credential_card__copy}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleCopyClick}
+      >
+        <FiCopy className={`${copied && styles.copied}`} />
+      </span>
     </div>
   )
 }
