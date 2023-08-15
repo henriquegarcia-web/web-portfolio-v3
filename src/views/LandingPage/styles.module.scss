@@ -1,11 +1,31 @@
 @import '@/styles/variables.module.scss';
 
 .landing_page {
+  position: relative;
   display: flex;
 }
 
 .landing_page__wrapper {
+  z-index: 100;
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.landing_page__background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    opacity: 0.4;
+  }
 }

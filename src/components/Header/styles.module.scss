@@ -1,6 +1,7 @@
 @import '@/styles/variables.module.scss';
 
 .header {
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -20,8 +21,8 @@
   width: fit-content;
   transition: 0.2s ease-in-out;
 
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 18px;
   font-weight: 200;
   letter-spacing: 1px;
 
@@ -65,11 +66,6 @@
       &:hover {
         background-color: $bg-container-hover;
         border-bottom: 2px solid #3a4750;
-      }
-
-      &.active {
-        border-bottom: 2px solid $menu-active;
-        border: 2px solid red !important;
       }
     }
   }

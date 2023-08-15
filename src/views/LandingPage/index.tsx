@@ -31,6 +31,9 @@ export default function LandingPage() {
           <ThanksSection />
         </Section>
       </div>
+      <div className={styles.landing_page__background}>
+        <img src="/images/background_01.png" alt="" />
+      </div>
     </div>
   )
 }
