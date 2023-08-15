@@ -5,6 +5,34 @@
   display: flex;
   align-items: center;
   column-gap: 5px;
+  height: 30px;
+  width: fit-content;
+  border-radius: 100px;
+  overflow: hidden;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  font-weight: 500;
+
+  color: $font-main;
+
+  background: $bg-container-active;
+
+  &:hover {
+    color: $font-hover;
+
+    background: $bg-block;
+  }
+}
+
+.buttonColorized {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
   height: 35px;
   width: fit-content;
   border-radius: 100px;
@@ -22,7 +50,6 @@
     position: absolute;
     content: '';
     display: inline-block;
-    background: rgba(59, 173, 227, 1);
     background: $main-degrade;
     height: 35px;
     width: 400%;
@@ -36,9 +63,4 @@
       transform: translateX(-200px);
     }
   }
-
-  // span {
-  //   position: relative;
-  //   top: 16px;
-  // }
 }

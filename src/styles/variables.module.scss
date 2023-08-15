@@ -38,6 +38,8 @@ $font-hover: rgba(255, 255, 255, 1);
 
 // ======================================
 
+$basic-degrade: linear-gradient(45deg, $bg-container-active 0%, $bg-block 100%);
+
 $main-degrade: linear-gradient(
   45deg,
   rgba(59, 173, 227, 1) 0%,

@@ -2,6 +2,7 @@
 
 import styles from './styles.module.scss'
 
+import { Button, ChangeLanguage } from '@/components'
 import { Link } from 'react-scroll'
 
 import { menuData } from '@/data/landingData'
@@ -29,8 +30,8 @@ export default function Header() {
           ))}
         </nav>
         <div className={styles.header__main_menu}>
-          <button className={styles.header__main_menu__button}>Blog</button>
-          {/* Change Language Input */}
+          <ChangeLanguage />
+          <Button label="Blog" path="/blog" />
         </div>
       </div>
     </header>

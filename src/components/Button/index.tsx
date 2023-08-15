@@ -6,18 +6,28 @@ import { Link as ScrollLink } from 'react-scroll'
 import Link from 'next/link'
 
 interface IButton {
+  colorized?: boolean
   icon?: React.ReactNode
   label: string
+  path?: string
   url?: string
   link?: string
   onClick?: () => void
 }
 
-export default function Button({ icon, label, link, url, onClick }: IButton) {
+export default function Button({
+  colorized = false,
+  icon,
+  label,
+  path,
+  link,
+  url,
+  onClick
+}: IButton) {
   if (link)
     return (
       <ScrollLink
-        className={styles.button}
+        className={`${colorized ? styles.buttonColorized : styles.button}`}
         activeClass="active"
         to={link}
         spy={true}
@@ -30,14 +40,21 @@ export default function Button({ icon, label, link, url, onClick }: IButton) {
 
   if (url)
     return (
-      <Link href={url} target="_blank" className={styles.button}>
+      <Link
+        className={`${colorized ? styles.buttonColorized : styles.button}`}
+        href={url}
+        target="_blank"
+      >
         {icon}
         {label}
       </Link>
     )
 
   return (
-    <button className={styles.button} onClick={onClick && onClick}>
+    <button
+      className={`${colorized ? styles.buttonColorized : styles.button}`}
+      onClick={onClick && onClick}
+    >
       {icon}
       {label}
     </button>

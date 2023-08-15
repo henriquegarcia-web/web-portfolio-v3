@@ -21,7 +21,7 @@ export default function HeroSection() {
           </p>
         </div>
         <div className={styles.hero_section__navigation}>
-          <Button label="+ Sobre mim" link="aboutme_section" />
+          <Button colorized label="+ Sobre mim" link="aboutme_section" />
           {socialMediasData.map((socialMedia) => (
             <IconButton
               key={socialMedia.mediaId}

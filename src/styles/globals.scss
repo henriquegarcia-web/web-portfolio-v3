@@ -38,11 +38,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: lightgrey;
+  background: $bg-main;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: gray;
+  background: rgba(59, 173, 227, 1);
   border-radius: 10px;
 }
 

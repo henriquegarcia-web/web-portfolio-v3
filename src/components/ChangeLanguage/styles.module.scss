@@ -1,0 +1,28 @@
+@import '@/styles/variables.module.scss';
+
+.change_language_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: $bradius-circle;
+  cursor: pointer;
+  transition: 0.3s;
+
+  background: $bg-container-active;
+
+  svg {
+    color: $font-main;
+
+    font-size: 14px;
+  }
+
+  &:hover {
+    background-color: $bg-block;
+
+    svg {
+      color: $font-hover;
+    }
+  }
+}
