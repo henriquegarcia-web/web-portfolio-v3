@@ -8,12 +8,12 @@ import Link from 'next/link'
 interface IButton {
   icon?: React.ReactNode
   label: string
-  href?: string
+  url?: string
   link?: string
   onClick?: () => void
 }
 
-export default function Button({ icon, label, link, href, onClick }: IButton) {
+export default function Button({ icon, label, link, url, onClick }: IButton) {
   if (link)
     return (
       <ScrollLink
@@ -28,9 +28,9 @@ export default function Button({ icon, label, link, href, onClick }: IButton) {
       </ScrollLink>
     )
 
-  if (href)
+  if (url)
     return (
-      <Link href={href} className={styles.button}>
+      <Link href={url} target="_blank" className={styles.button}>
         {icon}
         {label}
       </Link>

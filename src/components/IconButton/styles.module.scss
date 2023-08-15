@@ -7,6 +7,7 @@
   width: 35px;
   height: 35px;
   border-radius: $bradius-circle;
+  pointer-events: initial;
   cursor: pointer;
 
   border: 1px solid rgba(255, 255, 255, 0.6);
@@ -24,6 +25,16 @@
     svg {
       transition: all 0.5s ease-out;
       transform: rotateY(360deg);
+    }
+  }
+
+  &.isInactive {
+    pointer-events: none;
+    cursor: default;
+    background-color: gray;
+
+    svg {
+      color: lightgray;
     }
   }
 }

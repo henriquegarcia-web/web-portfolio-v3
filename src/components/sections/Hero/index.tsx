@@ -26,7 +26,7 @@ export default function HeroSection() {
             <IconButton
               key={socialMedia.mediaId}
               icon={socialMedia.mediaIcon}
-              href={socialMedia.mediaLink}
+              url={socialMedia.mediaLink}
             />
           ))}
         </div>

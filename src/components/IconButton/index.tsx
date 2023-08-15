@@ -6,17 +6,30 @@ import { Link as ScrollLink } from 'react-scroll'
 import Link from 'next/link'
 
 interface IIconButton {
+  isActive?: boolean
+  isInactive?: boolean
   icon: React.ReactNode
-  href?: string
+  url?: string
   link?: string
   onClick?: () => void
 }
 
-export default function IconButton({ icon, link, href, onClick }: IIconButton) {
+export default function IconButton({
+  isActive,
+  isInactive,
+  icon,
+  link,
+  url,
+  onClick
+}: IIconButton) {
   if (link)
     return (
       <ScrollLink
-        className={styles.icon_button}
+        className={`
+          ${styles.icon_button} 
+          ${isActive && styles.isActive} 
+          ${isInactive && styles.isInactive}
+        `}
         activeClass="active"
         to={link}
         spy={true}
@@ -26,15 +39,30 @@ export default function IconButton({ icon, link, href, onClick }: IIconButton) {
       </ScrollLink>
     )
 
-  if (href)
+  if (url)
     return (
-      <Link href={href} className={styles.icon_button}>
+      <Link
+        href={url}
+        target="_blank"
+        className={`
+          ${styles.icon_button} 
+          ${isActive && styles.isActive} 
+          ${isInactive && styles.isInactive}
+        `}
+      >
         {icon}
       </Link>
     )
 
   return (
-    <button className={styles.icon_button} onClick={onClick && onClick}>
+    <button
+      className={`
+        ${styles.icon_button} 
+        ${isActive && styles.isActive} 
+        ${isInactive && styles.isInactive}
+      `}
+      onClick={onClick && onClick}
+    >
       {icon}
     </button>
   )

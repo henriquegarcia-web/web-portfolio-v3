@@ -24,9 +24,9 @@ export default function LandingPage() {
         {/* <Section sectionName="myskills_section">
           <MySkillsSection />
         </Section> */}
-        <Section sectionName="portfolio_section">
+        {/* <Section sectionName="portfolio_section">
           <MyProjectsSection />
-        </Section>
+        </Section> */}
         <Section sectionName="thanks_section">
           <ThanksSection />
         </Section>
