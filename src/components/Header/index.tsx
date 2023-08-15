@@ -19,7 +19,7 @@ export default function Header() {
             <Link
               key={menu.menuId}
               className={styles.header__navigation__link}
-              activeClass="active"
+              activeStyle={{ borderBottom: '2px solid #00ebeb' }}
               to={menu.menuTo}
               spy={true}
               smooth={true}

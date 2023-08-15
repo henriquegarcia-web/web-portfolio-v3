@@ -15,18 +15,18 @@ export default function LandingPage() {
     <div className={styles.landing_page}>
       <Header />
       <div className={styles.landing_page__wrapper}>
-        {/* <Section sectionName="home">
+        <Section sectionName="home">
           <HeroSection />
-        </Section> */}
-        {/* <Section sectionName="aboutme_section">
+        </Section>
+        <Section sectionName="aboutme_section">
           <AboutMeSection />
-        </Section> */}
-        {/* <Section sectionName="myskills_section">
+        </Section>
+        <Section sectionName="myskills_section">
           <MySkillsSection />
-        </Section> */}
-        {/* <Section sectionName="portfolio_section">
+        </Section>
+        <Section sectionName="portfolio_section">
           <MyProjectsSection />
-        </Section> */}
+        </Section>
         <Section sectionName="thanks_section">
           <ThanksSection />
         </Section>
