@@ -7,5 +7,101 @@
   width: 100%;
   max-width: $section-maxwidth;
 
-  border: 2px solid white;
+  // border: 2px solid white;
+}
+
+.myskills_section__container {
+  display: flex;
+  width: 100%;
+  column-gap: 30px;
+  padding: 30px;
+  border-radius: $bradius-container;
+  min-height: 400px;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  .myskills_section__left_side {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    .myskills_section__skills {
+      display: flex;
+      flex-direction: column;
+
+      .skills__wrapper {
+        display: flex;
+        height: 300px;
+
+        // border: 2px solid white;
+      }
+    }
+  }
+
+  .myskills_section__right_side {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    .myskills_section__stacks {
+      display: flex;
+      flex-direction: column;
+
+      .stacks__wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .stacks__navigation {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+
+          .stacks__navigation__button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            height: fit-content;
+            padding: 8px 16px;
+            border-radius: $bradius-item;
+            cursor: pointer;
+
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+
+            background-color: $bg-block;
+            color: white;
+
+            &.isActive {
+            }
+          }
+        }
+
+        .stacks__list {
+          display: flex;
+          flex-direction: column;
+
+          .stacks__list__header {
+            margin-bottom: 12px;
+
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+
+            color: white;
+          }
+
+          .stacks__list__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 6px;
+            row-gap: 8px;
+          }
+        }
+      }
+    }
+  }
 }

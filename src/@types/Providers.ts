@@ -1,5 +1,10 @@
 export interface LandingContextData {
-  userId: string | null
+  activeGroup: any
+  activeSkill: any
+  setActiveSkill: any
+  activeGroupItems: any
+  handleActiveSkillGroup: any
+  chartData: any
 }
 
 export interface CollectionContextData {

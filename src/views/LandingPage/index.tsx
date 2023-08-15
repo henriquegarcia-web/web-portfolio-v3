@@ -18,12 +18,12 @@ export default function LandingPage() {
         {/* <Section sectionName="home">
           <HeroSection />
         </Section> */}
-        <Section sectionName="aboutme_section">
+        {/* <Section sectionName="aboutme_section">
           <AboutMeSection />
-        </Section>
-        <Section sectionName="myskills_section">
+        </Section> */}
+        {/* <Section sectionName="myskills_section">
           <MySkillsSection />
-        </Section>
+        </Section> */}
         <Section sectionName="portfolio_section">
           <MyProjectsSection />
         </Section>

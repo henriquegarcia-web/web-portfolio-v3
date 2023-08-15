@@ -1,0 +1,63 @@
+@import '@/styles/variables.module.scss';
+
+// ===================================================================
+
+.stack_visualizer {
+  display: flex;
+  column-gap: 8px;
+  padding: $spacing-small;
+  border-radius: $bradius-item;
+
+  background-color: $bg-container;
+
+  .stack_visualizer__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+
+    background-color: $bg-container-active;
+
+    img {
+      width: 30px;
+    }
+  }
+
+  .stack_visualizer__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    row-gap: 6px;
+
+    .stack_visualizer__tech_label {
+      font-size: 13px;
+      font-weight: 500;
+
+      color: white;
+    }
+
+    .stack_visualizer__tech_experience {
+      position: relative;
+      width: 100%;
+      height: 5px;
+      border-radius: $bradius-container;
+      background-color: $bg-container-active;
+      overflow: hidden;
+
+      .tech_experience__bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-radius: 0 $bradius-container $bradius-container 0;
+
+        background-color: #00ebeb;
+      }
+    }
+  }
+}
+
+// ===================================================================
