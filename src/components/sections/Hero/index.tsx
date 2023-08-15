@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 
-import { Button, IconButton } from '@/components'
+import { Button, IconButton, HeroTitle } from '@/components'
 
 import { socialMediasData } from '@/data/landingData'
 
@@ -9,7 +9,8 @@ export default function HeroSection() {
     <div className={styles.hero_section}>
       <div className={styles.hero_section__wrapper}>
         <div className={styles.hero_section__header}>
-          Desenvolvedor Front-End
+          {/* Desenvolvedor Front-End */}
+          <HeroTitle />
         </div>
         <div className={styles.hero_section__legend}>
           <p>
@@ -22,13 +23,15 @@ export default function HeroSection() {
         </div>
         <div className={styles.hero_section__navigation}>
           <Button colorized label="+ Sobre mim" link="aboutme_section" />
-          {socialMediasData.map((socialMedia) => (
-            <IconButton
-              key={socialMedia.mediaId}
-              icon={socialMedia.mediaIcon}
-              url={socialMedia.mediaLink}
-            />
-          ))}
+          <div className={styles.hero_section__navigation__medias}>
+            {socialMediasData.map((socialMedia) => (
+              <IconButton
+                key={socialMedia.mediaId}
+                icon={socialMedia.mediaIcon}
+                url={socialMedia.mediaLink}
+              />
+            ))}
+          </div>
         </div>
       </div>
       <div className={styles.hero_section__avatar}>

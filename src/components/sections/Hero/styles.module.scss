@@ -18,13 +18,13 @@
 
   // border: 2px solid white;
 
-  .hero_section__header {
-    font-size: 40px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+  // .hero_section__header {
+  //   font-size: 40px;
+  //   font-weight: 600;
+  //   letter-spacing: 0.5px;
 
-    color: white;
-  }
+  //   color: white;
+  // }
 
   .hero_section__legend {
     color: white;
@@ -41,8 +41,13 @@
 
   .hero_section__navigation {
     display: flex;
-    column-gap: 6px;
+    column-gap: 10px;
     margin-top: 10px;
+
+    .hero_section__navigation__medias {
+      display: flex;
+      column-gap: 4px;
+    }
   }
 }
 

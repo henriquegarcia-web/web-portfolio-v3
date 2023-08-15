@@ -12,7 +12,6 @@
   padding: 0 $padding-side;
 
   background-color: $bg-main;
-  color: white;
 }
 
 .header__logo {
@@ -26,8 +25,11 @@
   font-weight: 200;
   letter-spacing: 1px;
 
+  color: $font-active;
+
   b {
     cursor: pointer;
+    transition: 0.3s;
 
     padding-right: 8px;
     margin-right: 8px;
@@ -36,7 +38,7 @@
     border-right: 1px solid rgba(255, 255, 255, 0.8);
 
     &:hover {
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
     }
   }
 }
@@ -55,13 +57,14 @@
       cursor: pointer;
       transition: 0.2s;
 
-      font-size: 15px;
-      line-height: 15px;
+      font-size: 14px;
+      line-height: 14px;
       font-weight: 200;
       letter-spacing: 0.5px;
 
       border-left: 1px solid rgba(255, 255, 255, 0.15);
       border-bottom: 2px solid transparent;
+      color: $font-active;
 
       &:hover {
         background-color: $bg-container-hover;

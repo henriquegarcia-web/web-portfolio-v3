@@ -9,10 +9,11 @@
   border-radius: $bradius-circle;
   pointer-events: initial;
   cursor: pointer;
+  transition: 0.3s;
 
-  border: 1px solid rgba(255, 255, 255, 0.6);
-
-  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: $bg-container;
+  color: $font-main;
 
   svg {
     font-size: 18px;
@@ -21,10 +22,13 @@
 
   &:hover {
     // background-color: ${Colors.button};
+    border: 1px solid rgba(255, 255, 255, 0.8);
 
     svg {
       transition: all 0.5s ease-out;
       transform: rotateY(360deg);
+
+      color: $font-hover;
     }
   }
 

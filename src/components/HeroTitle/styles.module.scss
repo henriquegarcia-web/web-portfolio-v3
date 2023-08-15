@@ -1,0 +1,33 @@
+@import '@/styles/variables.module.scss';
+
+.hero_title {
+  background: linear-gradient(
+    to right,
+    $font-secondary 0,
+    white 10%,
+    $font-secondary 20%
+  );
+
+  background-position: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine-desktop 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@keyframes shine-desktop {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 480px;
+  }
+}
