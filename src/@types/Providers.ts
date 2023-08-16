@@ -9,6 +9,6 @@ export interface LandingContextData {
   handleScrollToTop: any
 }
 
-export interface CollectionContextData {
+export interface BlogContextData {
   userId: string | null
 }

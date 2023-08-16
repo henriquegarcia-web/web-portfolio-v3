@@ -24,6 +24,17 @@ export default function Button({
   url,
   onClick
 }: IButton) {
+  if (path)
+    return (
+      <Link
+        className={`${colorized ? styles.buttonColorized : styles.button}`}
+        href={path}
+      >
+        {icon}
+        {label}
+      </Link>
+    )
+
   if (link)
     return (
       <ScrollLink
