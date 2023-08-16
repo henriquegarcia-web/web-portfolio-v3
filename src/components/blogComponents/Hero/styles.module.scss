@@ -1,0 +1,67 @@
+@import '@/styles/variables.module.scss';
+
+.hero_blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  width: 100%;
+  margin: 40px 0;
+  padding: 30px;
+  border-radius: $bradius-container;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+
+  // border: 1px solid red;
+
+  .hero_blog__title {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+
+    color: $font-active;
+
+    b {
+      font-weight: 800;
+    }
+  }
+
+  .hero_blog__legend {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: center;
+
+    color: $font-main;
+  }
+
+  .hero_blog__filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    margin-top: 20px;
+
+    .hero_blog__filters__label {
+      // padding: 10px 0;
+
+      font-size: 12px;
+      font-weight: 500;
+
+      color: $font-secondary;
+    }
+
+    .hero_blog__text_search {
+      display: flex;
+    }
+
+    .hero_blog__tags_search {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 6px;
+      row-gap: 8px;
+    }
+  }
+}

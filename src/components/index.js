@@ -13,6 +13,11 @@ import MySkillsSection from './sections/MySkills'
 import MyProjectsSection from './sections/MyProjects'
 import ThanksSection from './sections/Thanks'
 
+import HeroBlog from './blogComponents/Hero'
+import PostCard from './blogComponents/PostCard'
+import PostListing from './blogComponents/PostListing'
+import SearchInput from './blogComponents/SearchInput'
+
 export {
   Header,
   Section,
@@ -30,3 +35,4 @@ export {
   MyProjectsSection,
   ThanksSection
 }
+export { HeroBlog, PostCard, PostListing, SearchInput }

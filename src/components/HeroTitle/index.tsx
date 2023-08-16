@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import styles from './styles.module.scss'
 
 export default function HeroTitle() {
