@@ -12,7 +12,10 @@ export default function PostListing() {
           <PostCard
             key={content.contentId}
             postTitle={content.contentTitle}
+            postLegend={content.contentLegend}
+            postAuthor={content.contentAuthor}
             postDate={content.contentPublicationDate}
+            postTags={content.contentTags}
             postPath={content.contentId}
           />
         ))}

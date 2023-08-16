@@ -3,7 +3,8 @@
 .post_card {
   display: flex;
   justify-content: space-between;
-  padding: 8px 15px;
+  column-gap: 15px;
+  padding: 12px 15px;
   border-radius: $bradius-item;
   transition: 0.3s;
 
@@ -13,26 +14,64 @@
     background-color: $bg-container;
   }
 
-  .post_card__title {
-    padding-bottom: 1px;
-    transition: 0.3s;
+  .post_card__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    width: 70%;
 
-    font-size: 13px;
-    line-height: 13px;
-    font-weight: 400;
+    .post_card__title {
+      transition: 0.3s;
 
-    color: $font-main;
+      font-size: 13px;
+      line-height: 13px;
+      font-weight: 600;
+
+      color: $font-active;
+    }
+
+    .post_card__legend {
+      padding-bottom: 1px;
+      transition: 0.3s;
+
+      font-size: 13px;
+      line-height: 13px;
+      font-weight: 400;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      line-height: 16px;
+      max-height: 16px;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+
+      color: $font-main;
+    }
+
+    .post_card__details {
+      margin-top: 6px;
+      padding-bottom: 1px;
+      transition: 0.3s;
+
+      font-size: 12px;
+      line-height: 12px;
+      font-weight: 300;
+
+      color: $font-secondary;
+
+      b {
+        font-weight: 500;
+      }
+    }
   }
 
-  .post_card__date {
-    padding-bottom: 1px;
-    transition: 0.3s;
-
-    font-size: 13px;
-    line-height: 13px;
-    font-weight: 300;
-
-    color: $font-secondary;
+  .post_card__tags {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
   }
 
   &:hover {
@@ -40,5 +79,29 @@
     & .post_card__date {
       color: $font-active;
     }
+  }
+}
+
+.post_card__tag {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 4px 8px;
+  border-radius: $bradius-item;
+  cursor: pointer;
+  transition: 0.3s;
+
+  font-size: 11px;
+  line-height: 11px;
+  font-weight: 500;
+
+  background-color: $bg-main;
+  color: $font-main;
+
+  &:hover {
+    color: $font-hover;
+    background-color: $bg-block;
   }
 }
