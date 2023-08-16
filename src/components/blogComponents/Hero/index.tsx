@@ -27,6 +27,7 @@ export default function HeroBlog() {
             placeholder="Pesquisar conteúdo ..."
             value={searchValue}
             onChange={handleChangeSearch}
+            onClick={() => {}}
           />
         </div>
         <span className={styles.hero_blog__filters__label}>

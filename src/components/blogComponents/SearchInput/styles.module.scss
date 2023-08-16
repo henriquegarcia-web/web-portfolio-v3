@@ -1,32 +1,55 @@
 @import '@/styles/variables.module.scss';
 
 .search_input__container {
-  position: relative;
   display: flex;
-  align-items: center;
-  column-gap: 10px;
-  border-radius: $bradius-item;
-  padding: 0 16px;
+  column-gap: 6px;
 
-  background-color: $bg-block;
+  .search_input__wrapper {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    column-gap: 6px;
+    border-radius: $bradius-item;
+    padding: 0 16px;
 
-  svg {
-    font-size: 20px;
+    background-color: $bg-block;
 
-    color: $font-main;
+    svg {
+      font-size: 18px;
+
+      color: $font-main;
+    }
+
+    .search_input {
+      width: fit-content;
+      min-width: 280px;
+      height: 100%;
+
+      letter-spacing: 0.5px;
+      font-size: 14px;
+      font-weight: 300;
+
+      color: $font-hover;
+      background-color: transparent;
+    }
   }
 
-  .search_input {
-    width: fit-content;
-    min-width: 280px;
+  .search_button {
+    height: 40px;
+    border-radius: $bradius-item;
+    padding: 0 16px 1px 16px;
+    cursor: pointer;
+    transition: 0.3s;
 
-    padding: 12px 0;
+    font-size: 13px;
+    font-weight: 500;
 
-    letter-spacing: 0.5px;
-    font-size: 14px;
-    font-weight: 300;
+    background-color: $bg-block;
+    color: $font-secondary;
 
-    color: $font-hover;
-    background-color: transparent;
+    &:hover {
+      background-color: $bg-container;
+      color: $font-active;
+    }
   }
 }
