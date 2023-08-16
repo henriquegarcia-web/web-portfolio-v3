@@ -5,6 +5,8 @@ export interface LandingContextData {
   activeGroupItems: any
   handleActiveSkillGroup: any
   chartData: any
+  scrollToTopIsEnable: any
+  handleScrollToTop: any
 }
 
 export interface CollectionContextData {

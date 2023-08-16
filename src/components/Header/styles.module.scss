@@ -64,11 +64,13 @@
 
       border-left: 1px solid rgba(255, 255, 255, 0.15);
       border-bottom: 2px solid transparent;
-      color: $font-active;
+      color: rgba(255, 255, 255, 0.7);
 
       &:hover {
         background-color: $bg-container-hover;
         border-bottom: 2px solid #3a4750;
+
+        color: $font-hover;
       }
     }
   }

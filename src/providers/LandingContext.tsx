@@ -8,6 +8,8 @@ import React, {
   useState
 } from 'react'
 
+import { animateScroll as scroll } from 'react-scroll'
+
 import { skillsData } from '@/data/landingData'
 
 // ===================================================================
@@ -23,6 +25,10 @@ const LandingProvider = ({ children }: { children: React.ReactNode }) => {
   const [activeSkill, setActiveSkill] = useState(
     skillsData[0].skillGroupItems[0]
   )
+
+  const [scrollToTopIsEnable, setScrollToTopIsEnable] = useState(false)
+
+  // ===================================================================
 
   const handleActiveSkillGroup = (skillGroupItems: any) => {
     setActiveGroup(skillGroupItems)
@@ -56,6 +62,13 @@ const LandingProvider = ({ children }: { children: React.ReactNode }) => {
 
   // ===================================================================
 
+  const handleScroll = () => {
+    const scrolledToBottom =
+      window.scrollY + window.innerHeight >=
+      document.documentElement.scrollHeight
+    setScrollToTopIsEnable(scrolledToBottom)
+  }
+
   useEffect(() => {
     function reveal() {
       const revealsLeft = document.querySelectorAll('.revealLeft')
@@ -84,6 +97,8 @@ const LandingProvider = ({ children }: { children: React.ReactNode }) => {
           revealsRight[i].classList.remove('active')
         }
       }
+
+      handleScroll()
     }
 
     window.addEventListener('scroll', reveal)
@@ -92,6 +107,14 @@ const LandingProvider = ({ children }: { children: React.ReactNode }) => {
       window.removeEventListener('scroll', reveal)
     }
   }, [])
+
+  const handleScrollToTop = () => {
+    scroll.scrollToTop()
+  }
+
+  useEffect(() => {
+    console.log(scrollToTopIsEnable)
+  }, [scrollToTopIsEnable])
 
   // =================================================================
 
@@ -102,9 +125,17 @@ const LandingProvider = ({ children }: { children: React.ReactNode }) => {
       setActiveSkill,
       activeGroupItems,
       handleActiveSkillGroup,
-      chartData
+      chartData,
+      scrollToTopIsEnable,
+      handleScrollToTop
     }
-  }, [activeGroup, activeSkill, activeGroupItems, chartData])
+  }, [
+    activeGroup,
+    activeSkill,
+    activeGroupItems,
+    chartData,
+    scrollToTopIsEnable
+  ])
 
   return (
     <LandingContext.Provider value={LandingContextValues}>

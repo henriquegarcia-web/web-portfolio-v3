@@ -1,0 +1,60 @@
+@import '@/styles/variables.module.scss';
+
+.scroll_to_top {
+  z-index: 120;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 6px;
+  border-radius: $bradius-circle;
+  background-color: $bg-container;
+  cursor: pointer;
+  opacity: 0;
+
+  svg {
+    transition: 0.3s;
+
+    font-size: 36px;
+    color: $font-secondary;
+  }
+
+  p {
+    padding-left: 2px;
+    transition: 0.3s;
+
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    color: $font-secondary;
+  }
+
+  &:hover {
+    svg,
+    p {
+      color: $font-hover;
+    }
+  }
+
+  &.isVisible {
+    animation: fadeIn 0.3s ease-in-out forwards;
+    animation-delay: 0.25s;
+
+    // background-color: $bg-container-active;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

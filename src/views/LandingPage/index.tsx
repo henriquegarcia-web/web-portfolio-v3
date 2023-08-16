@@ -7,7 +7,8 @@ import {
   AboutMeSection,
   MySkillsSection,
   MyProjectsSection,
-  ThanksSection
+  ThanksSection,
+  ScrollToTop
 } from '@/components'
 
 export default function LandingPage() {
@@ -34,6 +35,7 @@ export default function LandingPage() {
       <div className={styles.landing_page__background}>
         <img src="/images/background_01.png" alt="" />
       </div>
+      <ScrollToTop />
     </div>
   )
 }

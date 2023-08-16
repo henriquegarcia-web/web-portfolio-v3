@@ -2,5 +2,5 @@
 import styles from './styles.module.scss'
 
 export default function HeroTitle() {
-  return <div className={styles.hero_title}>Desenvolvedor Front-End</div>
+  return <h2 className={styles.hero_title}>Desenvolvedor Front-End</h2>
 }

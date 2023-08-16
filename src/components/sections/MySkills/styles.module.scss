@@ -72,13 +72,20 @@
             padding: 8px 16px;
             border-radius: $bradius-item;
             cursor: pointer;
+            transition: 0.3s;
 
             font-size: 12px;
             font-weight: 500;
             text-transform: uppercase;
 
-            background-color: $bg-block;
-            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: $bg-container;
+            color: $font-main;
+
+            &:hover {
+              border: 1px solid rgba(255, 255, 255, 0.4);
+              background-color: $bg-block;
+            }
 
             &.isActive {
             }

@@ -12,7 +12,7 @@
   padding: 10px;
   border-radius: 6px;
 
-  background-color: $font-main;
+  background-color: $bg-block;
 
   &:hover {
     & .slide__project_title {
@@ -43,17 +43,18 @@
       width: fit-content;
       height: fit-content;
       margin: 0 5px;
-      padding: 6px 8px;
+      padding: 8px 12px;
       border-radius: 6px;
       transition: 0.3s ease-in-out;
       opacity: 1;
 
-      font-size: 15px;
-      line-height: 15px;
+      font-size: 13px;
+      line-height: 13px;
       font-weight: 400;
       letter-spacing: 0.5px;
 
-      background-color: blue;
+      background-color: $bg-main;
+      color: $font-active;
 
       &.isActive {
         opacity: 0;
@@ -68,11 +69,12 @@
       flex-direction: column;
       width: 100%;
       height: fit-content;
-      padding: 12px;
+      padding: 15px;
       border-radius: 6px 6px 0 0;
       transition: 0.4s ease-in-out;
 
-      background-color: white;
+      background-color: rgba(35, 35, 35, 0.85);
+      backdrop-filter: blur(4px);
 
       &.isActive {
         bottom: 0px;
@@ -88,9 +90,11 @@
           width: 100%;
           margin-bottom: 8px;
 
-          font-size: 15px;
-          line-height: 15px;
+          font-size: 16px;
+          line-height: 16px;
           font-weight: 500;
+
+          color: $font-main;
 
           b {
             font-weight: 700;
@@ -101,11 +105,11 @@
         .project_details__description {
           width: 100%;
 
-          font-size: 15px;
-          line-height: 16px;
+          font-size: 14px;
+          line-height: 17px;
           font-weight: 300;
-          letter-spacing: 0.5px;
-          text-align: justify;
+
+          color: $font-main;
 
           b {
             font-weight: 700;
@@ -119,12 +123,14 @@
         flex-direction: column;
         width: 100%;
 
+        color: $font-main;
+
         p {
           margin-bottom: 10px;
 
-          font-size: 15px;
-          line-height: 15px;
-          font-weight: 400;
+          font-size: 13px;
+          line-height: 13px;
+          font-weight: 600;
           text-transform: uppercase;
         }
 
@@ -158,23 +164,23 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* padding: 4px 5px; */
-        /* margin-right: 4px; */
         width: calc((100% / 4) - 3px);
         height: auto;
+        padding-top: 1px;
         border-radius: 4px;
         cursor: pointer;
         transition: 0.2s;
 
-        font-size: 15px;
-        line-height: 15px;
+        font-size: 12px;
+        line-height: 12px;
         font-weight: 300;
 
-        border: 1px solid white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
         background-color: transparent;
+        color: $font-main;
 
         &.isActive {
-          background-color: white;
+          background-color: $bg-container-active;
         }
 
         &:last-of-type {
@@ -182,7 +188,7 @@
         }
 
         &:hover {
-          background-color: black;
+          border: 1px solid rgba(255, 255, 255, 0.4);
         }
       }
     }
