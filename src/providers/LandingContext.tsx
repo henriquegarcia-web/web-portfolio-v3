@@ -112,10 +112,6 @@ const LandingProvider = ({ children }: { children: React.ReactNode }) => {
     scroll.scrollToTop()
   }
 
-  useEffect(() => {
-    console.log(scrollToTopIsEnable)
-  }, [scrollToTopIsEnable])
-
   // =================================================================
 
   const LandingContextValues = useMemo(() => {

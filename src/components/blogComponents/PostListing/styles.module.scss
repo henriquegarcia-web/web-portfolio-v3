@@ -2,12 +2,36 @@
 
 .post_listing {
   display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 30px;
   border-radius: $bradius-container;
 
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(2px);
+
+  .post_listing__header {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: $bradius-item;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    background-color: $bg-main;
+    color: $font-active;
+
+    svg {
+      font-size: 18px;
+      margin-right: 8px;
+    }
+
+    b {
+      font-weight: 600;
+    }
+  }
 
   .post_listing__wrapper {
     display: flex;
