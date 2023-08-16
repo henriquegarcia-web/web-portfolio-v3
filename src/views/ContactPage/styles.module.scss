@@ -1,0 +1,10 @@
+@import '@/styles/variables.module.scss';
+
+.contact_page__wrapper {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  padding: $header-height 0;
+}

@@ -12,3 +12,7 @@ export interface LandingContextData {
 export interface BlogContextData {
   userId: string | null
 }
+
+export interface ContactContextData {
+  userId: string | null
+}

@@ -1,0 +1,43 @@
+@import '@/styles/variables.module.scss';
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid red;
+}
+
+.contact_form__header {
+  display: flex;
+
+  h3 {
+    font-size: 24px;
+    font-weight: 500;
+
+    color: $font-active;
+  }
+}
+
+.contact_form__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_form__button {
+  height: 40px;
+  border-radius: $bradius-item;
+  padding: 0 16px 1px 16px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  background-color: $bg-block;
+  color: $font-secondary;
+
+  &:hover {
+    background-color: $bg-container;
+    color: $font-active;
+  }
+}

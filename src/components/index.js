@@ -1,12 +1,16 @@
 import Header from './Header'
 import Section from './Section'
-import Button from './Button'
-import IconButton from './IconButton'
 import Tag from './Tag'
 import ChangeLanguage from './ChangeLanguage'
 import ChangeTheme from './ChangeTheme'
 import HeroTitle from './HeroTitle'
 import ScrollToTop from './ScrollToTop'
+
+import ContactForm from './ContactForm'
+
+import Button from './Button'
+import IconButton from './IconButton'
+import TextInput from './TextInput'
 
 import HeroSection from './sections/Hero'
 import AboutMeSection from './sections/AboutMe'
@@ -30,7 +34,9 @@ export {
   ChangeLanguage,
   ChangeTheme,
   HeroTitle,
-  ScrollToTop
+  ScrollToTop,
+  ContactForm,
+  TextInput
 }
 export {
   AboutMeSection,

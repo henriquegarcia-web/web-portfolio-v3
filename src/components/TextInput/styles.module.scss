@@ -1,0 +1,32 @@
+@import '@/styles/variables.module.scss';
+
+.text_input__container {
+  display: flex;
+  column-gap: 6px;
+
+  .text_input {
+    width: fit-content;
+    min-width: 280px;
+    height: 100%;
+
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    font-weight: 300;
+
+    color: $font-hover;
+    background-color: transparent;
+  }
+
+  .text_input__password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+    svg {
+      font-size: 16px;
+    }
+  }
+}

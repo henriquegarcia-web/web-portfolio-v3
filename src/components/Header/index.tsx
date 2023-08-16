@@ -11,10 +11,12 @@ import { menuData } from '@/data/landingData'
 
 interface IHeader {
   blog?: boolean
+  contact?: boolean
 }
 
-export default function Header({ blog = false }: IHeader) {
+export default function Header({ blog = false, contact = false }: IHeader) {
   if (blog) return <BlogHeader />
+  if (contact) return <ContactHeader />
 
   return (
     <header className={styles.header}>
@@ -46,6 +48,7 @@ export default function Header({ blog = false }: IHeader) {
         <div className={styles.header__main_menu}>
           <ChangeLanguage />
           <Button label="Blog" path="/blog" />
+          <Button label="Contato" path="/contato" />
         </div>
       </div>
     </header>
@@ -64,30 +67,37 @@ function BlogHeader() {
         <p>Blog</p>
       </div>
       <div className={styles.header__menu}>
-        {/* <nav className={styles.header__navigation}>
-          {menuData.map((menu) => (
-            <ScrollLink
-              key={menu.menuId}
-              className={styles.header__navigation__link}
-              activeStyle={{
-                color: 'white',
-                borderBottom: '2px solid rgba(59, 173, 227, 1)',
-                backgroundColor: '#2e313877'
-              }}
-              to={menu.menuTo}
-              spy={true}
-              smooth={true}
-            >
-              {menu.menuLabel}
-            </ScrollLink>
-          ))}
-        </nav> */}
         <div className={styles.header__main_menu}>
           <div className={styles.header__main_menu__wrapper}>
             <ChangeTheme />
             <ChangeLanguage />
           </div>
           <Button label="Portfólio" path="/" />
+          <Button label="Contato" path="/contato" />
+        </div>
+      </div>
+    </header>
+  )
+}
+
+// ===================================================== BLOG HEADER
+
+function ContactHeader() {
+  return (
+    <header className={styles.header}>
+      <div className={styles.header__logo}>
+        <Link href="/">
+          <b>Henrique Garcia</b>
+        </Link>
+        <p>Blog</p>
+      </div>
+      <div className={styles.header__menu}>
+        <div className={styles.header__main_menu}>
+          <div className={styles.header__main_menu__wrapper}>
+            <ChangeLanguage />
+          </div>
+          <Button label="Portfólio" path="/" />
+          <Button label="Blog" path="/blog" />
         </div>
       </div>
     </header>
