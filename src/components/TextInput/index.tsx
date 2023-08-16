@@ -28,9 +28,26 @@ export default function TextInput({
 
   const handleTogglePassword = () => setShowPassword(!showPassword)
 
+  if (type === 'textarea')
+    return (
+      <div className={styles.text_input__container}>
+        <span className={styles.text_input__label}>{label}</span>
+        <textarea
+          className={styles.text_input}
+          placeholder={placeholder}
+          rows={5}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          disabled={disabled}
+        />
+        <span className={styles.text_input__error}>{error}</span>
+      </div>
+    )
+
   if (type === 'password')
     return (
       <div className={styles.text_input__container}>
+        <span className={styles.text_input__label}>{label}</span>
         <input
           className={styles.text_input}
           type={type}
@@ -39,6 +56,7 @@ export default function TextInput({
           onChange={(e) => onChange(e.target.value)}
           disabled={disabled}
         />
+        <span className={styles.text_input__error}>{error}</span>
 
         <div
           className={styles.text_input__password}
@@ -51,6 +69,7 @@ export default function TextInput({
 
   return (
     <div className={styles.text_input__container}>
+      <span className={styles.text_input__label}>{label}</span>
       <input
         className={styles.text_input}
         type={type}
@@ -59,6 +78,7 @@ export default function TextInput({
         onChange={(e) => onChange(e.target.value)}
         disabled={disabled}
       />
+      <span className={styles.text_input__error}>{error}</span>
     </div>
   )
 }

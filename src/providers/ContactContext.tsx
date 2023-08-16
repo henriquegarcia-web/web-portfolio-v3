@@ -1,6 +1,13 @@
 'use client'
 
-import React, { createContext, useContext, useMemo, useState } from 'react'
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState
+} from 'react'
 
 // ===================================================================
 
@@ -11,15 +18,88 @@ export const ContactContext = createContext<ContactContextData>(
 )
 
 const ContactProvider = ({ children }: { children: React.ReactNode }) => {
+  const [contactName, setContactName] = useState('')
+  const [contactPhone, setContactPhone] = useState('')
+  const [contactMessage, setContactMessage] = useState('')
+
+  const [errorName, setErrorName] = useState('')
+  const [errorPhone, setErrorPhone] = useState('')
+  const [errorMessage, setErrorMessage] = useState('')
+
   // =================================================================
 
-  const [userId, setUserId] = useState<string | null>(null)
+  const handleChangeName = (value: string) => {
+    setContactName(value)
+    setErrorName('')
+  }
+
+  const handleChangePhone = (value: string) => {
+    setContactPhone(value)
+    setErrorPhone('')
+  }
+
+  const handleChangeMessage = (value: string) => {
+    setContactMessage(value)
+    setErrorMessage('')
+  }
+
+  const handleSubmitForm = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.preventDefault()
+
+      if (contactName === '') {
+        setErrorName('O nome não pode ser em branco')
+        return
+      }
+
+      if (contactPhone === '') {
+        setErrorPhone('O telefone não pode ser em branco')
+        return
+      }
+
+      // FUNÇÃO DE ENVIO DE MENSAGENS
+    },
+    [contactName, contactPhone]
+  )
+
+  useEffect(() => {
+    console.log(errorName)
+  }, [errorName])
+
+  const submitIsEnable =
+    errorName === '' &&
+    errorPhone === '' &&
+    errorMessage === '' &&
+    contactName !== '' &&
+    contactPhone !== '' &&
+    contactMessage !== ''
+
+  // =================================================================
 
   const ContactContextValues = useMemo(() => {
     return {
-      userId
+      contactName,
+      contactPhone,
+      contactMessage,
+      errorName,
+      errorPhone,
+      errorMessage,
+      handleChangeName,
+      handleChangePhone,
+      handleChangeMessage,
+      handleSubmitForm,
+      submitIsEnable
     }
-  }, [userId])
+  }, [
+    contactMessage,
+    contactName,
+    contactPhone,
+    errorMessage,
+    errorName,
+    errorPhone,
+    handleSubmitForm,
+    submitIsEnable
+  ])
 
   return (
     <ContactContext.Provider value={ContactContextValues}>

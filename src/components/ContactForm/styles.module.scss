@@ -3,41 +3,69 @@
 .contact_form {
   display: flex;
   flex-direction: column;
+  row-gap: 20px;
 
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 .contact_form__header {
   display: flex;
+  align-items: center;
+  column-gap: 7px;
+  padding: 8px 12px;
+  border-radius: $bradius-item;
+
+  background-color: $bg-main;
+
+  svg {
+    font-size: 24px;
+
+    color: $font-active;
+  }
 
   h3 {
-    font-size: 24px;
+    font-size: 15px;
     font-weight: 500;
 
     color: $font-active;
+
+    b {
+      font-weight: 800;
+    }
   }
 }
 
 .contact_form__wrapper {
   display: flex;
   flex-direction: column;
-}
+  row-gap: 8px;
 
-.contact_form__button {
-  height: 40px;
-  border-radius: $bradius-item;
-  padding: 0 16px 1px 16px;
-  cursor: pointer;
-  transition: 0.3s;
+  .contact_form__button {
+    width: 100%;
+    max-width: 100px;
+    height: 40px;
+    border-radius: $bradius-item;
+    margin: 10px 0 0 auto;
+    padding: 0 16px 1px 16px;
+    cursor: pointer;
+    transition: 0.3s;
 
-  font-size: 13px;
-  font-weight: 500;
+    font-size: 13px;
+    font-weight: 500;
 
-  background-color: $bg-block;
-  color: $font-secondary;
+    background-color: $bg-block;
+    color: $font-secondary;
 
-  &:hover {
-    background-color: $bg-container;
-    color: $font-active;
+    &:hover {
+      background-color: $bg-container;
+      color: $font-active;
+    }
+
+    &.disabled {
+      cursor: default;
+      pointer-events: none;
+
+      background-color: $bg-container;
+    }
   }
 }

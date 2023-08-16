@@ -2,9 +2,9 @@ import styles from './styles.module.scss'
 
 import { ContactForm } from '@/components'
 
-export default function BlogPage() {
+export default function ContactPage() {
   return (
-    <div className={styles.blog_page__wrapper}>
+    <div className={styles.contact_page__wrapper}>
       <ContactForm />
     </div>
   )

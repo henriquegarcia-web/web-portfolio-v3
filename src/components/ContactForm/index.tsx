@@ -1,28 +1,34 @@
 'use client'
 
-import { useState } from 'react'
-
 import styles from './styles.module.scss'
+import { BiMessageSquareEdit } from 'react-icons/bi'
 
 import { TextInput } from '@/components'
 
+import { useContact } from '@/providers/ContactContext'
+
 export default function ContactForm() {
-  const [contactName, setContactName] = useState('')
-  const [contactPhone, setContactPhone] = useState('')
-  const [contactMessage, setContactMessage] = useState('')
-
-  const [errorName, setErrorName] = useState('')
-  const [errorPhone, setErrorPhone] = useState('')
-  const [errorMessage, setErrorMessage] = useState('')
-
-  const handleChangeName = (value: string) => setContactName(value)
-  const handleChangePhone = (value: string) => setContactName(value)
-  const handleChangeMessage = (value: string) => setContactName(value)
+  const {
+    contactName,
+    contactPhone,
+    contactMessage,
+    errorName,
+    errorPhone,
+    errorMessage,
+    handleChangeName,
+    handleChangePhone,
+    handleChangeMessage,
+    handleSubmitForm,
+    submitIsEnable
+  } = useContact()
 
   return (
     <section className={styles.contact_form}>
       <div className={styles.contact_form__header}>
-        <h3>Entre em contato comigo através do formulário abaixo:</h3>
+        <BiMessageSquareEdit />
+        <h3>
+          <b>Entre em contato</b> comigo através do formulário abaixo:
+        </h3>
       </div>
       <form className={styles.contact_form__wrapper}>
         <TextInput
@@ -44,12 +50,20 @@ export default function ContactForm() {
         <TextInput
           label="Mensagem *"
           placeholder="Digite sua mensagem"
-          type="text"
+          type="textarea"
           value={contactMessage}
           onChange={handleChangeMessage}
           error={errorMessage}
         />
-        <button className={styles.contact_form__button}>Enviar</button>
+        <button
+          className={`${styles.contact_form__button} ${
+            !submitIsEnable && styles.disabled
+          }`}
+          onClick={handleSubmitForm}
+          disabled={!submitIsEnable}
+        >
+          Enviar
+        </button>
       </form>
     </section>
   )
