@@ -1,42 +1,75 @@
 @import '@/styles/variables.module.scss';
 
-.post_card {
+.post_header {
   display: flex;
-  justify-content: space-between;
-  column-gap: 15px;
-  padding: 12px 15px;
-  border-radius: $bradius-item;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.post_header__return {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  column-gap: 6px;
+  padding: 7px 9px;
+  border-radius: 100px;
+  cursor: pointer;
   transition: 0.3s;
 
+  font-size: 12px;
+  font-weight: 500;
+
+  color: $font-secondary;
   background-color: $bg-block;
+
+  svg {
+    transition: 0.3s;
+    font-size: 16px;
+
+    color: $font-secondary;
+  }
 
   &:hover {
     background-color: $bg-container;
-  }
+    color: $font-hover;
 
-  .post_card__content {
+    svg {
+      color: $font-hover;
+    }
+  }
+}
+
+.post_header__wrapper {
+  display: flex;
+  column-gap: 15px;
+  width: 100%;
+  padding: 25px;
+  border-radius: $bradius-container;
+
+  background-color: $bg-main;
+
+  .post_header__content {
     display: flex;
     flex-direction: column;
     row-gap: 4px;
     width: 70%;
 
-    .post_card__title {
+    .post_header__title {
       transition: 0.3s;
 
-      font-size: 13px;
-      line-height: 13px;
+      font-size: 15px;
+      line-height: 16px;
       font-weight: 600;
 
       color: $font-active;
     }
 
-    .post_card__legend {
-      padding-bottom: 1px;
+    .post_header__legend {
       transition: 0.3s;
 
-      font-size: 13px;
+      font-size: 14px;
       line-height: 13px;
-      font-weight: 400;
+      font-weight: 300;
 
       overflow: hidden;
       text-overflow: ellipsis;
@@ -49,7 +82,7 @@
       color: $font-main;
     }
 
-    .post_card__details {
+    .post_header__details {
       margin-top: 6px;
       padding-bottom: 1px;
       transition: 0.3s;
@@ -66,43 +99,20 @@
     }
   }
 
-  .post_card__tags {
+  .post_header__tags {
     display: flex;
     justify-content: flex-end;
     align-content: flex-start;
     flex-wrap: wrap;
     width: 30%;
-    gap: 5px;
+    column-gap: 6px;
+    row-gap: 8px;
   }
 
   &:hover {
-    & .post_card__title,
-    & .post_card__date {
+    & .post_header__title,
+    & .post_header__date {
       color: $font-active;
     }
-  }
-}
-
-.post_card__tag {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  height: fit-content;
-  padding: 4px 8px;
-  border-radius: $bradius-item;
-  cursor: pointer;
-  transition: 0.3s;
-
-  font-size: 11px;
-  line-height: 11px;
-  font-weight: 500;
-
-  background-color: $bg-main;
-  color: $font-main;
-
-  &:hover {
-    color: $font-hover;
-    background-color: $bg-block;
   }
 }

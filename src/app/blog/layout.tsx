@@ -1,8 +1,10 @@
 import '@/styles/globals.scss'
+import styles from '@/styles/blog.module.scss'
 
 import { BlogProviders } from './providers'
 
 import type { Metadata } from 'next'
+import { Header } from '@/components'
 
 export const metadata: Metadata = {
   title: 'Henrique Garcia | Coleções',
@@ -17,7 +19,17 @@ export default function BlogLayout({
   return (
     <html lang="pt-br">
       <body>
-        <BlogProviders>{children}</BlogProviders>
+        <BlogProviders>
+          <div className={styles.blog_page}>
+            <Header blog />
+
+            {children}
+
+            <div className={styles.blog__background}>
+              <img src="/images/background_01.png" alt="" />
+            </div>
+          </div>
+        </BlogProviders>
       </body>
     </html>
   )

@@ -15,9 +15,11 @@ import MyProjectsSection from './sections/MyProjects'
 import ThanksSection from './sections/Thanks'
 
 import HeroBlog from './blogComponents/Hero'
+import SearchInput from './blogComponents/SearchInput'
 import PostCard from './blogComponents/PostCard'
 import PostListing from './blogComponents/PostListing'
-import SearchInput from './blogComponents/SearchInput'
+import PostHeader from './blogComponents/PostHeader'
+import PostContent from './blogComponents/PostContent'
 
 export {
   Header,
@@ -37,4 +39,4 @@ export {
   MyProjectsSection,
   ThanksSection
 }
-export { HeroBlog, PostCard, PostListing, SearchInput }
+export { HeroBlog, PostCard, PostListing, SearchInput, PostHeader, PostContent }

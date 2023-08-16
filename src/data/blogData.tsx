@@ -84,7 +84,7 @@ const contentsData = [
     contentId: 'content_01',
     contentTitle: 'Título do Artigo 1',
     contentLegend:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'Lorem Ipsum is printing simply dummy text of the printing. Lorem Ipsum is simply dummy printing text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing.',
     contentPublicationDate: '26/07/2023',
     contentAuthor: 'Henrique Garcia',
     contentTags: contentsTagsToPost,

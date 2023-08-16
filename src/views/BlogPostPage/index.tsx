@@ -4,21 +4,25 @@ import styles from './styles.module.scss'
 
 import { useParams } from 'next/navigation'
 
-import { Header } from '@/components'
+import { contentsData } from '@/data/blogData'
+import { PostContent, PostHeader } from '@/components'
 
 export default function BlogPostPage() {
   const { id } = useParams()
 
-  console.log(id)
+  const blogPost = contentsData[0]
+
+  // console.log(id)
   return (
-    <div className={styles.blog_post_page}>
-      <Header blog />
-
-      <div className={styles.blog_post_page__wrapper}></div>
-
-      <div className={styles.blog__background}>
-        <img src="/images/background_01.png" alt="" />
-      </div>
+    <div className={styles.blog_post_page__wrapper}>
+      <PostHeader
+        postTitle={blogPost.contentTitle}
+        postLegend={blogPost.contentLegend}
+        postAuthor={blogPost.contentAuthor}
+        postDate={blogPost.contentPublicationDate}
+        postTags={blogPost.contentTags}
+      />
+      <PostContent postContent={blogPost.contentRichText} />
     </div>
   )
 }
