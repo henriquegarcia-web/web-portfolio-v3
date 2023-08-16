@@ -5,7 +5,7 @@ import styles from './styles.module.scss'
 import { Link as ScrollLink } from 'react-scroll'
 import Link from 'next/link'
 
-import { Button, ChangeLanguage } from '@/components'
+import { Button, ChangeLanguage, ChangeTheme } from '@/components'
 
 import { menuData } from '@/data/landingData'
 
@@ -83,8 +83,10 @@ function BlogHeader() {
           ))}
         </nav> */}
         <div className={styles.header__main_menu}>
-          <ChangeLanguage />
-          {/* Change Theme */}
+          <div className={styles.header__main_menu__wrapper}>
+            <ChangeTheme />
+            <ChangeLanguage />
+          </div>
           <Button label="Portfólio" path="/" />
         </div>
       </div>

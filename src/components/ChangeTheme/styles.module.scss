@@ -1,12 +1,11 @@
 @import '@/styles/variables.module.scss';
 
-.change_language_button {
+.change_theme_button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
-  padding-left: 1px;
   border-radius: $bradius-circle;
   cursor: pointer;
   transition: 0.3s;
@@ -16,7 +15,7 @@
   svg {
     color: $font-secondary;
 
-    font-size: 15px;
+    font-size: 16px;
   }
 
   &:hover {

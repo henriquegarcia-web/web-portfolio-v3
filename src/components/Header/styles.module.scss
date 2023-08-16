@@ -84,5 +84,10 @@
     padding-left: $padding-side;
 
     border-left: 1px solid rgba(255, 255, 255, 0.15);
+
+    .header__main_menu__wrapper {
+      display: flex;
+      column-gap: 5px;
+    }
   }
 }

@@ -4,6 +4,7 @@ import Button from './Button'
 import IconButton from './IconButton'
 import Tag from './Tag'
 import ChangeLanguage from './ChangeLanguage'
+import ChangeTheme from './ChangeTheme'
 import HeroTitle from './HeroTitle'
 import ScrollToTop from './ScrollToTop'
 
@@ -25,6 +26,7 @@ export {
   IconButton,
   Tag,
   ChangeLanguage,
+  ChangeTheme,
   HeroTitle,
   ScrollToTop
 }
