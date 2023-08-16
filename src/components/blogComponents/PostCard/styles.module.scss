@@ -2,4 +2,43 @@
 
 .post_card {
   display: flex;
+  justify-content: space-between;
+  padding: 8px 15px;
+  border-radius: $bradius-item;
+  transition: 0.3s;
+
+  background-color: $bg-block;
+
+  &:hover {
+    background-color: $bg-container;
+  }
+
+  .post_card__title {
+    padding-bottom: 1px;
+    transition: 0.3s;
+
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 400;
+
+    color: $font-main;
+  }
+
+  .post_card__date {
+    padding-bottom: 1px;
+    transition: 0.3s;
+
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 300;
+
+    color: $font-secondary;
+  }
+
+  &:hover {
+    & .post_card__title,
+    & .post_card__date {
+      color: $font-active;
+    }
+  }
 }

@@ -4,7 +4,8 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
 }
 
 .blog_page__wrapper {
@@ -13,7 +14,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 800px;
-  padding-top: $header-height;
+  padding: $header-height 0;
 }
 
 .blog__background {
