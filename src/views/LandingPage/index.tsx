@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './styles.module.scss'
 
 import {
@@ -11,9 +13,13 @@ import {
   ScrollToTop
 } from '@/components'
 
+import { useLanding } from '@/providers/LandingContext'
+
 export default function LandingPage() {
+  const { bodyRef } = useLanding()
+
   return (
-    <div className={styles.landing_page}>
+    <div ref={bodyRef} className={styles.landing_page}>
       <Header />
       <div className={styles.landing_page__wrapper}>
         <Section sectionName="home" fullEver>

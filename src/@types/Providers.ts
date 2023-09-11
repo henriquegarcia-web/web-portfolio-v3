@@ -7,6 +7,9 @@ export interface LandingContextData {
   chartData: any
   scrollToTopIsEnable: any
   handleScrollToTop: any
+  // revealsLeftRef: any
+  // revealsRightRef: any
+  bodyRef: any
 }
 
 export interface BlogContextData {

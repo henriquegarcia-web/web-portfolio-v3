@@ -1,30 +1,32 @@
-import { useEffect, useRef } from 'react'
+// 'use client'
 
-type CallbackFunction = () => void
+// import { useEffect, useRef } from 'react'
 
-const useClickOutside = (
-  ref: React.RefObject<HTMLElement>,
-  callback: CallbackFunction
-) => {
-  const callbackRef = useRef<CallbackFunction>()
+// type CallbackFunction = () => void
 
-  useEffect(() => {
-    callbackRef.current = callback
-  }, [callback])
+// const useClickOutside = (
+//   ref: React.RefObject<HTMLElement>,
+//   callback: CallbackFunction
+// ) => {
+//   const callbackRef = useRef<CallbackFunction>()
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (ref.current && !ref.current.contains(event.target as Node)) {
-        callbackRef.current?.()
-      }
-    }
+//   useEffect(() => {
+//     callbackRef.current = callback
+//   }, [callback])
 
-    document.addEventListener('click', handleClickOutside)
+//   useEffect(() => {
+//     const handleClickOutside = (event: MouseEvent) => {
+//       if (ref.current && !ref.current.contains(event.target as Node)) {
+//         callbackRef.current?.()
+//       }
+//     }
 
-    return () => {
-      document.removeEventListener('click', handleClickOutside)
-    }
-  }, [ref])
-}
+//     document.addEventListener('click', handleClickOutside)
 
-export default useClickOutside
+//     return () => {
+//       document.removeEventListener('click', handleClickOutside)
+//     }
+//   }, [ref])
+// }
+
+// export default useClickOutside

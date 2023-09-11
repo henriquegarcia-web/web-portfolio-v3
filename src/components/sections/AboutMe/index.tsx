@@ -65,7 +65,7 @@ export default function AboutMeSection() {
         </div>
       </div>
 
-      <div className={`revealLeft ${styles.aboutme_section__effect}`}>
+      <div className={`revealLeft active ${styles.aboutme_section__effect}`}>
         <img src="/images/effects/backdrop_01.png" alt="" />
       </div>
     </div>

@@ -7,7 +7,7 @@ import { RiDeviceLine, RiGithubLine, RiBehanceFill } from 'react-icons/ri'
 
 import { IconButton, Tag } from '@/components'
 
-import useClickOutside from '@/hooks/useClickOutside'
+// import useClickOutside from '@/hooks/useClickOutside'
 
 interface IPortfolioSlide {
   project: any
@@ -31,7 +31,7 @@ function PortfolioSlide({ project }: IPortfolioSlide) {
   const toogleProjectDetailsModal = () => setActiveInfosModal(!activeInfosModal)
   const closeProjectDetailsModal = () => setActiveInfosModal(false)
 
-  useClickOutside(projectDetailsRef, closeProjectDetailsModal)
+  // useClickOutside(projectDetailsRef, closeProjectDetailsModal)
 
   return (
     <div className={styles.slide} ref={projectDetailsRef}>

@@ -5,6 +5,7 @@ import React, {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState
 } from 'react'
 
@@ -62,55 +63,26 @@ const LandingProvider = ({ children }: { children: React.ReactNode }) => {
 
   // ===================================================================
 
+  const bodyRef = useRef<any>(null)
+
   const handleScroll = () => {
     const scrolledToBottom =
-      window.scrollY + window.innerHeight >=
-      document.documentElement.scrollHeight
+      window.scrollY + window.innerHeight >= bodyRef.current.scrollHeight
+
     setScrollToTopIsEnable(scrolledToBottom)
   }
-
-  useEffect(() => {
-    function reveal() {
-      const revealsLeft = document.querySelectorAll('.revealLeft')
-      const revealsRight = document.querySelectorAll('.revealRight')
-
-      for (let i = 0; i < revealsLeft.length; i++) {
-        const windowHeight = window.innerHeight
-        const elementTop = revealsLeft[i].getBoundingClientRect().top
-        const elementVisible = 150
-
-        if (elementTop < windowHeight - elementVisible) {
-          revealsLeft[i].classList.add('active')
-        } else {
-          revealsLeft[i].classList.remove('active')
-        }
-      }
-
-      for (let i = 0; i < revealsRight.length; i++) {
-        const windowHeight = window.innerHeight
-        const elementTop = revealsRight[i].getBoundingClientRect().top
-        const elementVisible = 150
-
-        if (elementTop < windowHeight - elementVisible) {
-          revealsRight[i].classList.add('active')
-        } else {
-          revealsRight[i].classList.remove('active')
-        }
-      }
-
-      handleScroll()
-    }
-
-    window.addEventListener('scroll', reveal)
-
-    return () => {
-      window.removeEventListener('scroll', reveal)
-    }
-  }, [])
 
   const handleScrollToTop = () => {
     scroll.scrollToTop()
   }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   // =================================================================
 
@@ -123,14 +95,20 @@ const LandingProvider = ({ children }: { children: React.ReactNode }) => {
       handleActiveSkillGroup,
       chartData,
       scrollToTopIsEnable,
-      handleScrollToTop
+      handleScrollToTop,
+      bodyRef
+      // revealsLeftRef,
+      // revealsRightRef
     }
   }, [
     activeGroup,
     activeSkill,
     activeGroupItems,
     chartData,
-    scrollToTopIsEnable
+    scrollToTopIsEnable,
+    bodyRef
+    // revealsLeftRef,
+    // revealsRightRef
   ])
 
   return (
