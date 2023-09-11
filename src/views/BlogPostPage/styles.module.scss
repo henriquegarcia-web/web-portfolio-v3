@@ -15,3 +15,11 @@
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(2px);
 }
+
+@media only screen and (min-width: 0px) and (max-width: 780px) {
+  .blog_post_page__wrapper {
+    margin: calc($header-height-mobile + 20px) $padding-side $padding-side
+      $padding-side;
+    padding: 20px;
+  }
+}

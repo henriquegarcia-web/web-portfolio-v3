@@ -40,3 +40,9 @@
     display: none;
   }
 }
+
+@media only screen and (min-width: 0px) and (max-width: 780px) {
+  .blog_page__wrapper {
+    padding: $header-height-mobile $padding-side;
+  }
+}
