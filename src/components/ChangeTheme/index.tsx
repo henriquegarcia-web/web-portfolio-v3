@@ -16,8 +16,15 @@ export default function ChangeTheme() {
     }
   }
   return (
-    <button className={styles.change_theme_button} onClick={handleChangeTheme}>
-      {theme === 'dark' ? <FiMoon /> : <FiSun />}
-    </button>
+    <div className={styles.change_theme_container}>
+      <button
+        className={styles.change_theme_button}
+        onClick={handleChangeTheme}
+      >
+        {theme === 'dark' ? <FiMoon /> : <FiSun />}
+      </button>
+
+      <span className={styles.change_theme_tooltip}>Indisponível</span>
+    </div>
   )
 }

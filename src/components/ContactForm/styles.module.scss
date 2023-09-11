@@ -6,6 +6,7 @@
   row-gap: 20px;
 
   // border: 1px solid red;
+  // overflow: hidden;
 }
 
 .contact_form__header {
@@ -66,6 +67,38 @@
       pointer-events: none;
 
       background-color: $bg-container;
+    }
+  }
+}
+
+.contact_form__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  column-gap: 20px;
+
+  p {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    column-gap: 4px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    span {
+      svg {
+        font-size: 20px;
+      }
+    }
+
+    &.error {
+      color: orange;
+    }
+
+    &.success {
+      color: greenyellow;
     }
   }
 }

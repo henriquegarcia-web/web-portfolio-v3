@@ -1,29 +1,72 @@
 @import '@/styles/variables.module.scss';
 
-.change_language_button {
+.change_language_container {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  padding-left: 1px;
-  border-radius: $bradius-circle;
-  cursor: pointer;
-  transition: 0.3s;
 
-  background: $bg-container-active;
+  .change_language_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding-left: 1px;
+    border-radius: $bradius-circle;
+    // cursor: pointer;
+    pointer-events: none;
+    transition: 0.3s;
 
-  svg {
-    color: $font-secondary;
-
-    font-size: 15px;
-  }
-
-  &:hover {
-    background-color: $bg-block;
+    background: $bg-container-active;
 
     svg {
-      color: $font-hover;
+      color: $font-secondary;
+
+      font-size: 15px;
     }
+
+    &:hover {
+      background-color: $bg-block;
+
+      svg {
+        color: $font-hover;
+      }
+    }
+  }
+
+  .change_language_tooltip {
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    width: fit-content;
+    padding: 8px 12px;
+    border-radius: 6px;
+
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+
+    color: #fff;
+    background-color: rgba(#000000, 0.6);
+  }
+
+  .change_language_tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(#000000, 0.6) transparent;
+  }
+
+  &:hover .change_language_tooltip {
+    visibility: visible;
+    opacity: 1;
   }
 }

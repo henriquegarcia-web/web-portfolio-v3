@@ -3,8 +3,6 @@ import styles from '@/styles/contact.module.scss'
 
 import { Header } from '@/components'
 
-import { ContactProviders } from './providers'
-
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -20,17 +18,15 @@ export default function ContactLayout({
   return (
     <html lang="pt-br">
       <body>
-        <ContactProviders>
-          <div className={styles.contact_page}>
-            <Header contact />
+        <div className={styles.contact_page}>
+          <Header contact />
 
-            {children}
+          {children}
 
-            <div className={styles.contact__background}>
-              <img src="/images/background_01.png" alt="" />
-            </div>
+          <div className={styles.contact__background}>
+            <img src="/images/background_01.png" alt="" />
           </div>
-        </ContactProviders>
+        </div>
       </body>
     </html>
   )

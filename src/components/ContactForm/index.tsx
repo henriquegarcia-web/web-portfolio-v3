@@ -1,69 +1,166 @@
 'use client'
 
+import { useState } from 'react'
+
 import styles from './styles.module.scss'
-import { BiMessageSquareEdit } from 'react-icons/bi'
+import {
+  BiMessageSquareEdit,
+  BiCheckCircle,
+  BiErrorCircle
+} from 'react-icons/bi'
 
 import { TextInput } from '@/components'
 
-import { useContact } from '@/providers/ContactContext'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
+import * as Yup from 'yup'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { Controller, useForm } from 'react-hook-form'
+
+import { submitContact } from '@/firebase/contact'
+
+const signinSchema = Yup.object().shape({
+  contactName: Yup.string().required('O campo nome é obrigatório'),
+  contactPhone: Yup.string().required('O campo telefone é obrigatório'),
+  contactMessage: Yup.string().required('O campo mensagem é obrigatório')
+})
+
+interface IContactForm {
+  contactName: string
+  contactPhone: string
+  contactMessage: string
+}
 
 export default function ContactForm() {
-  const {
-    contactName,
-    contactPhone,
-    contactMessage,
-    errorName,
-    errorPhone,
-    errorMessage,
-    handleChangeName,
-    handleChangePhone,
-    handleChangeMessage,
-    handleSubmitForm,
-    submitIsEnable
-  } = useContact()
+  const [contactFormSubmitResponse, setContactFormSubmitResponse] = useState({
+    messageType: '',
+    messageValue: ''
+  })
+
+  const { handleSubmit, register, formState, reset, control } = useForm({
+    mode: 'onBlur',
+    resolver: yupResolver(signinSchema)
+  })
+
+  const { errors, isSubmitting, isValid } = formState
+
+  const handleSubmitContact = async (data: IContactForm) => {
+    if (!isValid) return
+
+    const submitContactResponse = await submitContact({
+      contactName: data.contactName,
+      contactPhone: data.contactPhone,
+      contactMessage: data.contactMessage
+    })
+
+    if (submitContactResponse) {
+      setContactFormSubmitResponse({
+        messageType: 'success',
+        messageValue: 'Contato submetido com sucesso!'
+      })
+
+      reset()
+      return
+    }
+
+    setContactFormSubmitResponse({
+      messageType: 'error',
+      messageValue: 'Falha ao submeter contato. Tente novamente.'
+    })
+  }
+
+  const submitIsEnable = !isSubmitting && isValid
 
   return (
     <section className={styles.contact_form}>
+      <ToastContainer />
+
       <div className={styles.contact_form__header}>
         <BiMessageSquareEdit />
         <h3>
           <b>Entre em contato</b> comigo através do formulário abaixo:
         </h3>
       </div>
-      <form className={styles.contact_form__wrapper}>
-        <TextInput
-          label="Nome *"
-          placeholder="Digite seu nome"
-          type="text"
-          value={contactName}
-          onChange={handleChangeName}
-          error={errorName}
+      <form
+        className={styles.contact_form__wrapper}
+        onSubmit={handleSubmit(handleSubmitContact)}
+      >
+        <Controller
+          name="contactName"
+          control={control}
+          defaultValue={''}
+          render={({ field }) => (
+            <TextInput
+              label="Nome *"
+              placeholder="Digite seu nome"
+              type="text"
+              value={field.value}
+              onChange={field.onChange}
+              error={errors.contactName?.message}
+            />
+          )}
         />
-        <TextInput
-          label="Telefone *"
-          placeholder="Digite seu telefone"
-          type="text"
-          value={contactPhone}
-          onChange={handleChangePhone}
-          error={errorPhone}
+        <Controller
+          name="contactPhone"
+          control={control}
+          defaultValue={''}
+          render={({ field }) => (
+            <TextInput
+              label="Telefone *"
+              placeholder="Digite seu telefone"
+              type="text"
+              value={field.value}
+              onChange={field.onChange}
+              error={errors.contactPhone?.message}
+            />
+          )}
         />
-        <TextInput
-          label="Mensagem *"
-          placeholder="Digite sua mensagem"
-          type="textarea"
-          value={contactMessage}
-          onChange={handleChangeMessage}
-          error={errorMessage}
+        <Controller
+          name="contactMessage"
+          control={control}
+          defaultValue={''}
+          render={({ field }) => (
+            <TextInput
+              label="Mensagem *"
+              placeholder="Digite sua mensagem"
+              type="textarea"
+              value={field.value}
+              onChange={field.onChange}
+              error={errors.contactMessage?.message}
+            />
+          )}
         />
-        <button
-          className={`${styles.contact_form__button} ${
-            !submitIsEnable && styles.disabled
-          }`}
-          onClick={handleSubmitForm}
-          disabled={!submitIsEnable}
-        >
-          Enviar
-        </button>
+        <div className={styles.contact_form__footer}>
+          {contactFormSubmitResponse.messageValue !== '' && (
+            <p
+              className={
+                contactFormSubmitResponse.messageType === 'error'
+                  ? styles.error
+                  : styles.success
+              }
+            >
+              <span>
+                {contactFormSubmitResponse.messageType === 'error' ? (
+                  <BiErrorCircle />
+                ) : (
+                  <BiCheckCircle />
+                )}
+              </span>
+              {contactFormSubmitResponse.messageValue}
+            </p>
+          )}
+
+          <button
+            className={`${styles.contact_form__button} ${
+              !submitIsEnable && styles.disabled
+            }`}
+            type="submit"
+            disabled={!submitIsEnable}
+          >
+            Enviar
+          </button>
+        </div>
       </form>
     </section>
   )

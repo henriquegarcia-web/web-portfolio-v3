@@ -6,11 +6,15 @@ import { LuLanguages } from 'react-icons/lu'
 export default function ChangeLanguage() {
   const handleChangeLanguage = () => {}
   return (
-    <button
-      className={styles.change_language_button}
-      onClick={handleChangeLanguage}
-    >
-      <LuLanguages />
-    </button>
+    <div className={styles.change_language_container}>
+      <button
+        className={styles.change_language_button}
+        onClick={handleChangeLanguage}
+      >
+        <LuLanguages />
+      </button>
+
+      <span className={styles.change_language_tooltip}>Indisponível</span>
+    </div>
   )
 }
