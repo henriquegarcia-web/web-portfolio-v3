@@ -48,6 +48,12 @@
   display: flex;
   height: 100%;
 
+  .header__menu__mobile__balance {
+    display: none;
+    width: 34px;
+    margin-right: 15px;
+  }
+
   .header__navigation {
     display: flex;
 
@@ -88,6 +94,121 @@
     .header__main_menu__wrapper {
       display: flex;
       column-gap: 5px;
+    }
+  }
+
+  .header__menu__mobile {
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    margin-left: $padding-side;
+    padding-left: $padding-side;
+    cursor: pointer;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+
+    svg {
+      font-size: 20px;
+      color: $font-secondary;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      svg {
+        color: $font-hover;
+      }
+    }
+  }
+}
+
+.header__navigation__mobile {
+  position: fixed;
+  right: -100%;
+  top: $header-height;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 100%;
+  row-gap: 6px;
+  transition: 0.3s;
+
+  background-color: $bg-main;
+
+  .header__navigation__link {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+
+    border-bottom: 2px solid transparent;
+    color: rgba(255, 255, 255, 0.7);
+
+    &:hover {
+      background-color: $bg-container-hover;
+      border-bottom: 2px solid #3a4750;
+
+      color: $font-hover;
+    }
+  }
+
+  &.isActive {
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1080px) {
+  .header__menu {
+    .header__navigation {
+      display: none;
+    }
+
+    .header__menu__mobile {
+      display: flex;
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 780px) {
+  .header {
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    row-gap: 15px;
+    padding: 20px $padding-side;
+
+    .header__menu {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+      .header__menu__mobile__balance {
+        display: flex;
+      }
+
+      .header__main_menu {
+        border: none;
+        padding-left: 0;
+      }
+
+      .header__menu__mobile {
+        height: fit-content;
+        padding: 6px;
+
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+    }
+
+    .header__navigation__mobile {
+      top: 107px;
     }
   }
 }

@@ -1,6 +1,9 @@
 'use client'
 
+import { useState } from 'react'
+
 import styles from './styles.module.scss'
+import { FiMenu, FiX } from 'react-icons/fi'
 
 import { Link as ScrollLink } from 'react-scroll'
 import Link from 'next/link'
@@ -18,6 +21,18 @@ export default function Header({ blog = false, contact = false }: IHeader) {
   if (blog) return <BlogHeader />
   if (contact) return <ContactHeader />
 
+  return <MainHeader />
+}
+
+// ===================================================== BLOG HEADER
+
+function MainHeader() {
+  const [isMobileNavigationActive, setIsMobileNavigationActive] =
+    useState(false)
+
+  const toogleMobileNavigation = () =>
+    setIsMobileNavigationActive(!isMobileNavigationActive)
+
   return (
     <header className={styles.header}>
       <div className={styles.header__logo}>
@@ -26,7 +41,10 @@ export default function Header({ blog = false, contact = false }: IHeader) {
         </Link>
         <p>Portfólio</p>
       </div>
+
       <div className={styles.header__menu}>
+        <div className={styles.header__menu__mobile__balance} />
+
         <nav className={styles.header__navigation}>
           {menuData.map((menu) => (
             <ScrollLink
@@ -50,7 +68,38 @@ export default function Header({ blog = false, contact = false }: IHeader) {
           <Button label="Blog" path="/blog" />
           <Button label="Contato" path="/contato" />
         </div>
+
+        <div
+          className={styles.header__menu__mobile}
+          onClick={toogleMobileNavigation}
+        >
+          {!isMobileNavigationActive ? <FiMenu /> : <FiX />}
+        </div>
       </div>
+
+      <nav
+        className={`${styles.header__navigation__mobile} ${
+          isMobileNavigationActive && styles.isActive
+        }`}
+      >
+        {menuData.map((menu) => (
+          <ScrollLink
+            key={menu.menuId}
+            className={styles.header__navigation__link}
+            activeStyle={{
+              color: 'white',
+              borderBottom: '2px solid rgba(59, 173, 227, 1)',
+              backgroundColor: '#2e313877'
+            }}
+            to={menu.menuTo}
+            spy={true}
+            smooth={true}
+            onClick={toogleMobileNavigation}
+          >
+            {menu.menuLabel}
+          </ScrollLink>
+        ))}
+      </nav>
     </header>
   )
 }
@@ -58,6 +107,12 @@ export default function Header({ blog = false, contact = false }: IHeader) {
 // ===================================================== BLOG HEADER
 
 function BlogHeader() {
+  // const [isMobileNavigationActive, setIsMobileNavigationActive] =
+  //   useState(false)
+
+  // const toogleMobileNavigation = () =>
+  //   setIsMobileNavigationActive(!isMobileNavigationActive)
+
   return (
     <header className={styles.header}>
       <div className={styles.header__logo}>
@@ -66,7 +121,10 @@ function BlogHeader() {
         </Link>
         <p>Blog</p>
       </div>
+
       <div className={styles.header__menu}>
+        <div className={styles.header__menu__mobile__balance} />
+
         <div className={styles.header__main_menu}>
           <div className={styles.header__main_menu__wrapper}>
             <ChangeTheme />
@@ -75,7 +133,37 @@ function BlogHeader() {
           <Button label="Portfólio" path="/" />
           <Button label="Contato" path="/contato" />
         </div>
+
+        {/* <div
+          className={styles.header__menu__mobile}
+          onClick={toogleMobileNavigation}
+        >
+          {!isMobileNavigationActive ? <FiMenu /> : <FiX />}
+        </div> */}
       </div>
+
+      {/* <nav
+        className={`${styles.header__navigation__mobile} ${
+          isMobileNavigationActive && styles.isActive
+        }`}
+      >
+        {menuData.map((menu) => (
+          <ScrollLink
+            key={menu.menuId}
+            className={styles.header__navigation__link}
+            activeStyle={{
+              color: 'white',
+              borderBottom: '2px solid rgba(59, 173, 227, 1)',
+              backgroundColor: '#2e313877'
+            }}
+            to={menu.menuTo}
+            spy={true}
+            smooth={true}
+          >
+            {menu.menuLabel}
+          </ScrollLink>
+        ))}
+      </nav> */}
     </header>
   )
 }
@@ -83,6 +171,12 @@ function BlogHeader() {
 // ===================================================== BLOG HEADER
 
 function ContactHeader() {
+  // const [isMobileNavigationActive, setIsMobileNavigationActive] =
+  //   useState(false)
+
+  // const toogleMobileNavigation = () =>
+  //   setIsMobileNavigationActive(!isMobileNavigationActive)
+
   return (
     <header className={styles.header}>
       <div className={styles.header__logo}>
@@ -91,7 +185,10 @@ function ContactHeader() {
         </Link>
         <p>Blog</p>
       </div>
+
       <div className={styles.header__menu}>
+        <div className={styles.header__menu__mobile__balance} />
+
         <div className={styles.header__main_menu}>
           <div className={styles.header__main_menu__wrapper}>
             <ChangeLanguage />
@@ -99,7 +196,37 @@ function ContactHeader() {
           <Button label="Portfólio" path="/" />
           <Button label="Blog" path="/blog" />
         </div>
+
+        {/* <div
+          className={styles.header__menu__mobile}
+          onClick={toogleMobileNavigation}
+        >
+          {!isMobileNavigationActive ? <FiMenu /> : <FiX />}
+        </div> */}
       </div>
+
+      {/* <nav
+        className={`${styles.header__navigation__mobile} ${
+          isMobileNavigationActive && styles.isActive
+        }`}
+      >
+        {menuData.map((menu) => (
+          <ScrollLink
+            key={menu.menuId}
+            className={styles.header__navigation__link}
+            activeStyle={{
+              color: 'white',
+              borderBottom: '2px solid rgba(59, 173, 227, 1)',
+              backgroundColor: '#2e313877'
+            }}
+            to={menu.menuTo}
+            spy={true}
+            smooth={true}
+          >
+            {menu.menuLabel}
+          </ScrollLink>
+        ))}
+      </nav> */}
     </header>
   )
 }
