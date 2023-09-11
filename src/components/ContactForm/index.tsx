@@ -9,6 +9,8 @@ import {
   BiErrorCircle
 } from 'react-icons/bi'
 
+import { PiSpinnerBold } from 'react-icons/pi'
+
 import { TextInput } from '@/components'
 
 import { ToastContainer, toast } from 'react-toastify'
@@ -37,6 +39,7 @@ export default function ContactForm() {
     messageType: '',
     messageValue: ''
   })
+  const [contactSentIsLoading, setContactSentIsLoading] = useState(false)
 
   const { handleSubmit, register, formState, reset, control } = useForm({
     mode: 'onBlur',
@@ -48,11 +51,15 @@ export default function ContactForm() {
   const handleSubmitContact = async (data: IContactForm) => {
     if (!isValid) return
 
+    setContactSentIsLoading(true)
+
     const submitContactResponse = await submitContact({
       contactName: data.contactName,
       contactPhone: data.contactPhone,
       contactMessage: data.contactMessage
     })
+
+    setContactSentIsLoading(false)
 
     if (submitContactResponse) {
       setContactFormSubmitResponse({
@@ -70,7 +77,7 @@ export default function ContactForm() {
     })
   }
 
-  const submitIsEnable = !isSubmitting && isValid
+  const submitIsEnable = (!isSubmitting && isValid) || contactSentIsLoading
 
   return (
     <section className={styles.contact_form}>
@@ -158,6 +165,11 @@ export default function ContactForm() {
             type="submit"
             disabled={!submitIsEnable}
           >
+            {contactSentIsLoading && (
+              <span className={styles.loading}>
+                <PiSpinnerBold />
+              </span>
+            )}
             Enviar
           </button>
         </div>

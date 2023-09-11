@@ -7,11 +7,18 @@
   width: 100%;
   max-width: 600px;
   height: fit-content;
-  margin-top: calc($header-height + 30px);
+  margin: calc($header-height + 30px) $padding-side 0 $padding-side;
   row-gap: 10px;
   padding: 30px;
   border-radius: $bradius-container;
 
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(2px);
+}
+
+@media only screen and (min-width: 0px) and (max-width: 780px) {
+  .contact_page__wrapper {
+    margin-top: calc($header-height-mobile + 30px);
+    padding: 20px;
+  }
 }
