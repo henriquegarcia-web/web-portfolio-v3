@@ -15,7 +15,8 @@
 @media only screen and (min-width: 0px) and (max-width: 780px) {
   .section {
     height: fit-content;
-    padding-top: calc($header-height-mobile + 20px);
+    padding: calc($header-height-mobile + 20px) $padding-side $padding-side
+      $padding-side;
 
     &.fullEver {
       height: 100vh;

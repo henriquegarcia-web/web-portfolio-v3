@@ -10,8 +10,6 @@
   justify-content: center;
   align-items: center;
   row-gap: 6px;
-  border-radius: $bradius-circle;
-  background-color: $bg-container;
   cursor: pointer;
   opacity: 0;
 
@@ -43,8 +41,18 @@
   &.isVisible {
     animation: fadeIn 0.3s ease-in-out forwards;
     animation-delay: 0.25s;
+  }
+}
 
-    // background-color: $bg-container-active;
+@media only screen and (min-width: 0px) and (max-width: 780px) {
+  .scroll_to_top {
+    svg {
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 10px;
+    }
   }
 }
 
