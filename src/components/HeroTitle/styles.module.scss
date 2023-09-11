@@ -20,7 +20,13 @@
   font-weight: 600;
   letter-spacing: 0.5px;
   text-decoration: none;
-  white-space: nowrap;
+  white-space: wrap;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 780px) {
+  .hero_title {
+    font-size: 34px;
+  }
 }
 
 @keyframes shine-desktop {

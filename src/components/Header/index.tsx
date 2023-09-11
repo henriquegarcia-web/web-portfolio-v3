@@ -107,12 +107,6 @@ function MainHeader() {
 // ===================================================== BLOG HEADER
 
 function BlogHeader() {
-  // const [isMobileNavigationActive, setIsMobileNavigationActive] =
-  //   useState(false)
-
-  // const toogleMobileNavigation = () =>
-  //   setIsMobileNavigationActive(!isMobileNavigationActive)
-
   return (
     <header className={styles.header}>
       <div className={styles.header__logo}>
@@ -134,36 +128,8 @@ function BlogHeader() {
           <Button label="Contato" path="/contato" />
         </div>
 
-        {/* <div
-          className={styles.header__menu__mobile}
-          onClick={toogleMobileNavigation}
-        >
-          {!isMobileNavigationActive ? <FiMenu /> : <FiX />}
-        </div> */}
+        <div className={styles.header__menu__mobile__balance} />
       </div>
-
-      {/* <nav
-        className={`${styles.header__navigation__mobile} ${
-          isMobileNavigationActive && styles.isActive
-        }`}
-      >
-        {menuData.map((menu) => (
-          <ScrollLink
-            key={menu.menuId}
-            className={styles.header__navigation__link}
-            activeStyle={{
-              color: 'white',
-              borderBottom: '2px solid rgba(59, 173, 227, 1)',
-              backgroundColor: '#2e313877'
-            }}
-            to={menu.menuTo}
-            spy={true}
-            smooth={true}
-          >
-            {menu.menuLabel}
-          </ScrollLink>
-        ))}
-      </nav> */}
     </header>
   )
 }
@@ -171,12 +137,6 @@ function BlogHeader() {
 // ===================================================== BLOG HEADER
 
 function ContactHeader() {
-  // const [isMobileNavigationActive, setIsMobileNavigationActive] =
-  //   useState(false)
-
-  // const toogleMobileNavigation = () =>
-  //   setIsMobileNavigationActive(!isMobileNavigationActive)
-
   return (
     <header className={styles.header}>
       <div className={styles.header__logo}>
@@ -197,36 +157,8 @@ function ContactHeader() {
           <Button label="Blog" path="/blog" />
         </div>
 
-        {/* <div
-          className={styles.header__menu__mobile}
-          onClick={toogleMobileNavigation}
-        >
-          {!isMobileNavigationActive ? <FiMenu /> : <FiX />}
-        </div> */}
+        <div className={styles.header__menu__mobile__balance} />
       </div>
-
-      {/* <nav
-        className={`${styles.header__navigation__mobile} ${
-          isMobileNavigationActive && styles.isActive
-        }`}
-      >
-        {menuData.map((menu) => (
-          <ScrollLink
-            key={menu.menuId}
-            className={styles.header__navigation__link}
-            activeStyle={{
-              color: 'white',
-              borderBottom: '2px solid rgba(59, 173, 227, 1)',
-              backgroundColor: '#2e313877'
-            }}
-            to={menu.menuTo}
-            spy={true}
-            smooth={true}
-          >
-            {menu.menuLabel}
-          </ScrollLink>
-        ))}
-      </nav> */}
     </header>
   )
 }

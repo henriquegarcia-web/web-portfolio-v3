@@ -9,7 +9,6 @@ export default function HeroSection() {
     <div className={styles.hero_section}>
       <div className={styles.hero_section__wrapper}>
         <div className={styles.hero_section__header}>
-          {/* Desenvolvedor Front-End */}
           <HeroTitle />
         </div>
         <div className={styles.hero_section__legend}>
