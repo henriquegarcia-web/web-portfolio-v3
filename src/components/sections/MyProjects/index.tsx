@@ -27,7 +27,6 @@ export default function MyProjectsSection() {
         <h2 className="section_header">Portfólio</h2>
         <div className={styles.myprojects_section__wrapper}>
           <Swiper
-            // slidesPerView={2}
             spaceBetween={30}
             loop={true}
             pagination={{
@@ -37,11 +36,9 @@ export default function MyProjectsSection() {
             className="mySwiper"
             breakpoints={{
               0: {
-                // width: 640,
                 slidesPerView: 1
               },
               780: {
-                // width: 768,
                 slidesPerView: 2
               }
             }}

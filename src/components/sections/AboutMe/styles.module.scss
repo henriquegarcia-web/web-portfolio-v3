@@ -95,6 +95,15 @@
 
     .aboutme_section__right_side {
       width: 100%;
+
+      .aboutme_section__infos {
+        .infos__wrapper {
+          .infos__social_medias {
+            flex-direction: column;
+            row-gap: 6px;
+          }
+        }
+      }
     }
   }
 }
