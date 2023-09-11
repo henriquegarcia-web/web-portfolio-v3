@@ -7,5 +7,18 @@
   height: 100vh;
   padding: $header-height $padding-side 0 $padding-side;
 
-  // border: 2px solid blue;
+  &.fullEver {
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 780px) {
+  .section {
+    height: fit-content;
+    padding-top: calc($header-height-mobile + 20px);
+
+    &.fullEver {
+      height: 100vh;
+    }
+  }
 }

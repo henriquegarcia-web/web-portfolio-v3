@@ -7,8 +7,6 @@
   align-items: center;
   width: 100%;
   max-width: $section-maxwidth;
-
-  // border: 2px solid white;
 }
 
 .aboutme_section__effect {
@@ -16,9 +14,6 @@
   bottom: 0;
   left: 0;
   transform: translate(-70%, 60%) scale(0.8);
-
-  // img {
-  // }
 }
 
 .aboutme_section__container {
@@ -86,6 +81,20 @@
           column-gap: 10px;
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 780px) {
+  .aboutme_section__container {
+    row-gap: 30px;
+
+    .aboutme_section__left_side {
+      width: 100%;
+    }
+
+    .aboutme_section__right_side {
+      width: 100%;
     }
   }
 }

@@ -16,7 +16,7 @@ export default function LandingPage() {
     <div className={styles.landing_page}>
       <Header />
       <div className={styles.landing_page__wrapper}>
-        <Section sectionName="home">
+        <Section sectionName="home" fullEver>
           <HeroSection />
         </Section>
         <Section sectionName="aboutme_section">
@@ -28,7 +28,7 @@ export default function LandingPage() {
         <Section sectionName="portfolio_section">
           <MyProjectsSection />
         </Section>
-        <Section sectionName="thanks_section">
+        <Section sectionName="thanks_section" fullEver>
           <ThanksSection />
         </Section>
       </div>

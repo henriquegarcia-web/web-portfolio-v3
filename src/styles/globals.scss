@@ -113,3 +113,9 @@ body {
 .ql-editor {
   padding: 0 !important;
 }
+
+@media only screen and (min-width: 0px) and (max-width: 780px) {
+  .section_container {
+    flex-direction: column;
+  }
+}

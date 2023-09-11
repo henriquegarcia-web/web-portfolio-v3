@@ -7,8 +7,6 @@
   align-items: center;
   width: 100%;
   max-width: $section-maxwidth;
-
-  // border: 2px solid white;
 }
 
 .myskills_section__effect {
@@ -16,9 +14,6 @@
   bottom: 0;
   right: 0;
   transform: translate(70%, 60%) scale(0.85);
-
-  // img {
-  // }
 }
 
 .myskills_section__container {
@@ -38,8 +33,6 @@
       .skills__wrapper {
         display: flex;
         height: 300px;
-
-        // border: 2px solid white;
       }
     }
   }
@@ -115,6 +108,20 @@
           }
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 780px) {
+  .myskills_section__container {
+    row-gap: 40px;
+
+    .myskills_section__left_side {
+      width: 100%;
+    }
+
+    .myskills_section__right_side {
+      width: 100%;
     }
   }
 }
