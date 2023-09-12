@@ -495,54 +495,54 @@ const projectsData = [
     projectWebsite: '',
     projectStacks: [
       {
-        stackId: 'project_09_stack_02',
+        stackId: 'project_10_stack_02',
         stackName: 'React'
       },
       {
-        stackId: 'project_09_stack_03',
+        stackId: 'project_10_stack_03',
         stackName: 'TypeScritpt'
       },
       {
-        stackId: 'project_09_stack_04',
+        stackId: 'project_10_stack_04',
         stackName: 'Firebase'
       },
       {
-        stackId: 'project_09_stack_05',
+        stackId: 'project_10_stack_05',
         stackName: 'Material-UI'
       },
       {
-        stackId: 'project_09_stack_06',
+        stackId: 'project_10_stack_06',
         stackName: 'Everegreen-UI'
       }
     ],
     projectImages: [
       {
-        imageId: 'project_09_image_01',
-        imageUrl: '/images/projects/project09/1.png'
+        imageId: 'project_10_image_01',
+        imageUrl: '/images/projects/project10/1.png'
       },
       {
-        imageId: 'project_09_image_02',
-        imageUrl: '/images/projects/project09/2.png'
+        imageId: 'project_10_image_02',
+        imageUrl: '/images/projects/project10/2.png'
       },
       {
-        imageId: 'project_09_image_03',
-        imageUrl: '/images/projects/project09/3.png'
+        imageId: 'project_10_image_03',
+        imageUrl: '/images/projects/project10/3.png'
       },
       {
-        imageId: 'project_09_image_04',
-        imageUrl: '/images/projects/project09/4.png'
+        imageId: 'project_10_image_04',
+        imageUrl: '/images/projects/project10/4.png'
       },
       {
-        imageId: 'project_09_image_05',
-        imageUrl: '/images/projects/project09/5.png'
+        imageId: 'project_10_image_05',
+        imageUrl: '/images/projects/project10/5.png'
       },
       {
-        imageId: 'project_09_image_06',
-        imageUrl: '/images/projects/project09/6.png'
+        imageId: 'project_10_image_06',
+        imageUrl: '/images/projects/project10/6.png'
       },
       {
-        imageId: 'project_09_image_07',
-        imageUrl: '/images/projects/project09/7.png'
+        imageId: 'project_10_image_07',
+        imageUrl: '/images/projects/project10/7.png'
       }
     ]
   },
