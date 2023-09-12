@@ -62,11 +62,13 @@ const aboutMeData = {
   aboutMeResume: (
     <>
       <p>
-        I wrote my first code in 2018 programming games with C# in Unity3D. I
-        started looking for new solutions and technologies and then I found the
-        front end. Since then, I have been constantly evolving, seeking to
-        always be up to date and in line with trends in the area. I have a real
-        passion for programming and its possibilities.
+        Escrevi meu primeiro código em 2018 programando jogos com C# na Unity3D,
+        em um curso de programação de jogos digitais. Desde então, comecei a
+        procurar novas soluções e tecnologias e foi então encontrei a área de
+        front-end. Eu que já havia uma predisposição para design, decidi seguir
+        carreira nessa área. Com uma paixão verdadeira pela programação e suas
+        possibilidades, sou um programador autodidata, sempre evoluindo e me
+        mantendo atualizado com as tendências atuais do mundo da tecnologia.
       </p>
     </>
   ),
@@ -92,7 +94,7 @@ const skillsData = [
         skillName: 'JavaScript (ES6+)',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg',
-        skillLevel: 80
+        skillLevel: 90
       },
       {
         skillId: 'ts_skill',
@@ -102,74 +104,81 @@ const skillsData = [
         skillLevel: 80
       },
       {
-        skillId: 'redux_skill',
-        skillName: 'Redux',
-        skillIcon:
-          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
-        skillLevel: 80
-      },
-      {
-        skillId: 'html_skill',
-        skillName: 'HTML5',
+        skillId: 'stack_base_skill',
+        skillName: 'HTML5 & CSS3',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg',
-        skillLevel: 80
-      },
-      {
-        skillId: 'css_skill',
-        skillName: 'CSS3',
-        skillIcon:
-          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg',
-        skillLevel: 80
-      },
-      {
-        skillId: 'graphql_skill',
-        skillName: 'GraphQL (Apollo Client)',
-        skillIcon:
-          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg',
-        skillLevel: 80
+        skillLevel: 94
       },
       {
         skillId: 'sassless_skill',
         skillName: 'Sass/Less',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
-        skillLevel: 80
+        skillLevel: 90
       },
-      // {
-      //   skillId: 'ajax_skill',
-      //   skillName: 'AJAX',
-      //   skillIcon: '',
-      //   skillLevel: 80
-      // },
-
-      {
-        skillId: 'jest_skill',
-        skillName: 'Jest',
-        skillIcon:
-          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg',
-        skillLevel: 80
-      },
-
-      // {
-      //   skillId: 'pwa_skill',
-      //   skillName: 'PWA',
-      //   skillIcon: '',
-      //   skillLevel: 80
-      // },
       {
         skillId: 'php_skill',
         skillName: 'PHP',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg',
-        skillLevel: 80
-      }
+        skillLevel: 70
+      },
+      {
+        skillId: 'jest_skill',
+        skillName: 'Jest',
+        skillIcon:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg',
+        skillLevel: 85
+      },
       // {
-      //   skillId: 'twig_skill',
-      //   skillName: 'Twig',
+      //   skillId: 'cypress_skill',
+      //   skillName: 'Cypress',
       //   skillIcon: '',
       //   skillLevel: 80
-      // }
+      // },
+      {
+        skillId: 'git_skill',
+        skillName: 'Git',
+        skillIcon:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+        skillLevel: 90
+      },
+      {
+        skillId: 'eslint_skill',
+        skillName: 'ESLint & Prettier',
+        skillIcon:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg',
+        skillLevel: 85
+      },
+      {
+        skillId: 'gulp_skill',
+        skillName: 'Gulp & Grunt',
+        skillIcon:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gulp/gulp-plain.svg',
+        skillLevel: 80
+      },
+      {
+        skillId: 'figma_skill',
+        skillName: 'Figma',
+        skillIcon:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+        skillLevel: 88
+      },
+      {
+        skillId: 'bitbucket_skill',
+        skillName: 'Bitbucket',
+        skillIcon:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg',
+        skillLevel: 75
+      },
+      {
+        skillId: 'webpack_skill',
+        skillName: 'Webpack',
+        skillIcon:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg',
+        skillLevel: 70
+      }
     ]
   },
   {
@@ -181,14 +190,14 @@ const skillsData = [
         skillName: 'ReactJS',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-        skillLevel: 80
+        skillLevel: 90
       },
       {
         skillId: 'reactnative_skill',
         skillName: 'React Native',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-        skillLevel: 80
+        skillLevel: 84
       },
       {
         skillId: 'next_skill',
@@ -198,25 +207,46 @@ const skillsData = [
         skillLevel: 80
       },
       {
+        skillId: 'redux_skill',
+        skillName: 'Redux',
+        skillIcon:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
+        skillLevel: 80
+      },
+      {
+        skillId: 'jquery_skill',
+        skillName: 'jQuery',
+        skillIcon:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg',
+        skillLevel: 75
+      },
+      {
+        skillId: 'mobx_skill',
+        skillName: 'Mobx',
+        skillIcon:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+        skillLevel: 80
+      },
+      {
+        skillId: 'three_skill',
+        skillName: 'Three.js',
+        skillIcon:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg',
+        skillLevel: 65
+      },
+      {
         skillId: 'bootstrap_skill',
         skillName: 'Bootstrap',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg',
-        skillLevel: 80
-      },
-      {
-        skillId: 'firebase_skill',
-        skillName: 'Firebase',
-        skillIcon:
-          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
-        skillLevel: 80
+        skillLevel: 75
       },
       {
         skillId: 'magento_skill',
         skillName: 'Magento',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/magento/magento-original.svg',
-        skillLevel: 80
+        skillLevel: 65
       },
       {
         skillId: 'tailwind_skill',
@@ -230,7 +260,7 @@ const skillsData = [
         skillName: 'Material UI',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-plain.svg',
-        skillLevel: 80
+        skillLevel: 92
       }
     ]
   },
@@ -243,25 +273,25 @@ const skillsData = [
         skillName: 'Node.js',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg',
-        skillLevel: 80
+        skillLevel: 75
       },
       {
         skillId: 'express_skill',
         skillName: 'Express.js',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
-        skillLevel: 80
+        skillLevel: 70
       },
       {
         skillId: 'mongodb_skill',
         skillName: 'MongoDB',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg',
-        skillLevel: 80
+        skillLevel: 75
       },
       {
         skillId: 'graphql_skill',
-        skillName: 'GraphQL (Apollo Server)',
+        skillName: 'GraphQL',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg',
         skillLevel: 80
@@ -271,7 +301,7 @@ const skillsData = [
         skillName: 'MySQL',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain.svg',
-        skillLevel: 80
+        skillLevel: 85
       },
       {
         skillId: 'postgresql_skill',
@@ -279,7 +309,26 @@ const skillsData = [
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg',
         skillLevel: 80
+      },
+      {
+        skillId: 'firebase_skill',
+        skillName: 'Firebase',
+        skillIcon:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+        skillLevel: 95
       }
+      // {
+      //   skillId: 'rest_skill',
+      //   skillName: 'REST',
+      //   skillIcon: '',
+      //   skillLevel: 80
+      // },
+      // {
+      //   skillId: 'soap_skill',
+      //   skillName: 'SOAP',
+      //   skillIcon: '',
+      //   skillLevel: 80
+      // }
     ]
   },
   {
@@ -291,21 +340,21 @@ const skillsData = [
         skillName: 'Unity 3D',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg',
-        skillLevel: 80
+        skillLevel: 70
       },
       {
         skillId: 'blender_skill',
         skillName: 'Blender 3D',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg',
-        skillLevel: 80
+        skillLevel: 65
       },
       {
         skillId: 'csharp_skill',
         skillName: 'C# para Unity',
         skillIcon:
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
-        skillLevel: 80
+        skillLevel: 75
       }
     ]
   }
@@ -313,11 +362,196 @@ const skillsData = [
 
 const projectsData = [
   {
+    projectId: 'project_00',
+    projectName: 'Frontend Lab',
+    projectDescription: 'Plataforma e-learning para desenvolvedores front-end',
+    projectGitHub:
+      'https://github.com/henriquegarcia-web/frontendlab-dashboard',
+    projectBehance: '',
+    projectWebsite: '',
+    projectStacks: [
+      {
+        stackId: 'project_00_stack_01',
+        stackName: 'Next.js'
+      },
+      {
+        stackId: 'project_00_stack_02',
+        stackName: 'React'
+      },
+      {
+        stackId: 'project_00_stack_03',
+        stackName: 'TypeScritpt'
+      },
+      {
+        stackId: 'project_00_stack_04',
+        stackName: 'Firebase'
+      },
+      {
+        stackId: 'project_00_stack_05',
+        stackName: 'Material-UI'
+      },
+      {
+        stackId: 'project_00_stack_06',
+        stackName: 'Everegreen-UI'
+      },
+      {
+        stackId: 'project_00_stack_07',
+        stackName: 'Twilio'
+      }
+    ],
+    projectImages: [
+      {
+        imageId: 'project_00_image_01',
+        imageUrl: '/images/projects/project00/1.png'
+      },
+      {
+        imageId: 'project_00_image_02',
+        imageUrl: '/images/projects/project00/2.png'
+      },
+      {
+        imageId: 'project_00_image_03',
+        imageUrl: '/images/projects/project00/3.png'
+      },
+      {
+        imageId: 'project_00_image_04',
+        imageUrl: '/images/projects/project00/4.png'
+      },
+      {
+        imageId: 'project_00_image_05',
+        imageUrl: '/images/projects/project00/5.png'
+      },
+      {
+        imageId: 'project_00_image_06',
+        imageUrl: '/images/projects/project00/6.png'
+      },
+      {
+        imageId: 'project_00_image_07',
+        imageUrl: '/images/projects/project00/7.png'
+      }
+    ]
+  },
+  {
+    projectId: 'project_09',
+    projectName: 'Dashboard Delivery',
+    projectDescription:
+      'Dashboard controlador de uma aplicação de delivery de comida',
+    projectGitHub: '',
+    projectBehance:
+      'https://www.behance.net/gallery/171361963/Sistema-de-Delivery',
+    projectWebsite: '',
+    projectStacks: [
+      {
+        stackId: 'project_09_stack_01',
+        stackName: 'Next.js'
+      },
+      {
+        stackId: 'project_09_stack_02',
+        stackName: 'React'
+      },
+      {
+        stackId: 'project_09_stack_03',
+        stackName: 'TypeScritpt'
+      },
+      {
+        stackId: 'project_09_stack_04',
+        stackName: 'Firebase'
+      },
+      {
+        stackId: 'project_09_stack_05',
+        stackName: 'Material-UI'
+      },
+      {
+        stackId: 'project_09_stack_06',
+        stackName: 'Everegreen-UI'
+      }
+    ],
+    projectImages: [
+      {
+        imageId: 'project_09_image_01',
+        imageUrl: '/images/projects/project09/1.png'
+      },
+      {
+        imageId: 'project_09_image_02',
+        imageUrl: '/images/projects/project09/2.png'
+      },
+      {
+        imageId: 'project_09_image_03',
+        imageUrl: '/images/projects/project09/3.png'
+      },
+      {
+        imageId: 'project_09_image_04',
+        imageUrl: '/images/projects/project09/4.png'
+      }
+    ]
+  },
+  {
+    projectId: 'project_10',
+    projectName: 'Sistema de Tickets',
+    projectDescription:
+      'Aplicação de controle de tickets de suporte para freelancers',
+    projectGitHub: '',
+    projectBehance:
+      'https://www.behance.net/gallery/171362009/Sistema-de-Tickets',
+    projectWebsite: '',
+    projectStacks: [
+      {
+        stackId: 'project_09_stack_02',
+        stackName: 'React'
+      },
+      {
+        stackId: 'project_09_stack_03',
+        stackName: 'TypeScritpt'
+      },
+      {
+        stackId: 'project_09_stack_04',
+        stackName: 'Firebase'
+      },
+      {
+        stackId: 'project_09_stack_05',
+        stackName: 'Material-UI'
+      },
+      {
+        stackId: 'project_09_stack_06',
+        stackName: 'Everegreen-UI'
+      }
+    ],
+    projectImages: [
+      {
+        imageId: 'project_09_image_01',
+        imageUrl: '/images/projects/project09/1.png'
+      },
+      {
+        imageId: 'project_09_image_02',
+        imageUrl: '/images/projects/project09/2.png'
+      },
+      {
+        imageId: 'project_09_image_03',
+        imageUrl: '/images/projects/project09/3.png'
+      },
+      {
+        imageId: 'project_09_image_04',
+        imageUrl: '/images/projects/project09/4.png'
+      },
+      {
+        imageId: 'project_09_image_05',
+        imageUrl: '/images/projects/project09/5.png'
+      },
+      {
+        imageId: 'project_09_image_06',
+        imageUrl: '/images/projects/project09/6.png'
+      },
+      {
+        imageId: 'project_09_image_07',
+        imageUrl: '/images/projects/project09/7.png'
+      }
+    ]
+  },
+  {
     projectId: 'project_01',
     projectName: 'Web Portfólio Versão 3.0 - Atual',
     projectDescription:
       'Nova versão do meu web portfólio, incluindo novas features, recursos e eastereggs.',
-    projectGitHub: '',
+    projectGitHub: 'https://github.com/henriquegarcia-web/web-portfolio-v3',
     projectBehance: '',
     projectWebsite: '',
     projectStacks: [
@@ -438,7 +672,7 @@ const projectsData = [
         stackName: 'GraphQL'
       },
       {
-        stackId: 'project_03_stack_07',
+        stackId: 'project_03_stack_08',
         stackName: 'Node.js'
       }
     ],
@@ -552,11 +786,11 @@ const projectsData = [
         stackName: 'TypeScript'
       },
       {
-        stackId: 'project_05_stack_03',
+        stackId: 'project_05_stack_04',
         stackName: 'Styled-Components'
       },
       {
-        stackId: 'project_05_stack_03',
+        stackId: 'project_05_stack_05',
         stackName: 'Firebase'
       }
     ],
