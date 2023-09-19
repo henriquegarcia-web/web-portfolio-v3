@@ -13,11 +13,11 @@ export default function HeroSection() {
         </div>
         <div className={styles.hero_section__legend}>
           <p>
-            Desde 2018 <b>codificando soluções</b> como{' '}
+            Desde 2018, <b>codificando soluções</b> como{' '}
             <b>programador front-end</b>
           </p>
           <p>
-            Esta daqui é uma <b>outra legenda</b> como pode se ver
+            Especialista <b>React</b>, <b>React Native</b> e <b>Next.js</b>
           </p>
         </div>
         <div className={styles.hero_section__navigation}>

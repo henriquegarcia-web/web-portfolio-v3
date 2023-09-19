@@ -62,13 +62,15 @@ const aboutMeData = {
   aboutMeResume: (
     <>
       <p>
-        Escrevi meu primeiro código em 2018 programando jogos com C# na Unity3D,
-        em um curso de programação de jogos digitais. Desde então, comecei a
-        procurar novas soluções e tecnologias e foi então encontrei a área de
-        front-end. Eu que já havia uma predisposição para design, decidi seguir
-        carreira nessa área. Com uma paixão verdadeira pela programação e suas
-        possibilidades, sou um programador autodidata, sempre evoluindo e me
-        mantendo atualizado com as tendências atuais do mundo da tecnologia.
+        Escrevi meu primeiro código em 2018, programando jogos com C# na
+        Unity3D, em um curso de programação de jogos digitais. Desde então,
+        comecei a procurar novas soluções e tecnologias e foi então que
+        encontrei a área de front-end. Eu, que já tinha uma predisposição para
+        programação e design, decidi seguir carreira nessa área. Com uma paixão
+        verdadeira pela área e suas possibilidades, sou um programador
+        autodidata, sempre evoluindo e me mantendo atualizado com as tendências
+        mais atuais do mundo da tecnologia, incluindo Inteligência Artificial e
+        outros.
       </p>
     </>
   ),
